@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="760" viewBox="0 0 1000 760">
+<defs>
+  <linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#4c4237"/><stop offset=".45" stop-color="#201b16"/><stop offset="1" stop-color="#0f0d0b"/></linearGradient>
+  <linearGradient id="wood" x1="0" x2="1"><stop offset="0" stop-color="#7b5739"/><stop offset=".5" stop-color="#b98a58"/><stop offset="1" stop-color="#4d3422"/></linearGradient>
+  <linearGradient id="stone" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#e7ded0"/><stop offset=".5" stop-color="#9f9488"/><stop offset="1" stop-color="#35302b"/></linearGradient>
+  <filter id="grain"><feTurbulence baseFrequency=".78" numOctaves="3" seed="7" type="fractalNoise"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .09"/></feComponentTransfer></filter>
+  <filter id="soft"><feDropShadow dx="0" dy="26" stdDeviation="30" flood-color="#000" flood-opacity=".35"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="url(#g)"/>
+<rect width="100%" height="100%" filter="url(#grain)" opacity=".65"/>
+
+<rect x="0" y="0" width="100%" height="46%" fill="#191613" opacity=".96"/>
+<rect x="0" y="455" width="100%" height="305" fill="#2a241f"/>
+<g filter="url(#soft)">
+  <rect x="92" y="198" width="212" height="260" rx="22" fill="#d7ccbd" opacity=".88"/>
+  <rect x="333" y="198" width="220" height="260" rx="22" fill="#5b4a3d" opacity=".9"/>
+  <rect x="585" y="198" width="290" height="260" rx="22" fill="#151311" opacity=".9"/>
+  <rect x="176" y="493" width="650" height="82" rx="28" fill="url(#stone)" opacity=".92"/>
+</g>
+<path d="M210 105 C360 58 590 58 792 118" stroke="#d8b889" stroke-width="3" opacity=".48" fill="none"/>
+<circle cx="398" cy="128" r="18" fill="#d8b889" opacity=".32"/><circle cx="622" cy="136" r="15" fill="#f6dfba" opacity=".34"/>
+
+</svg>
