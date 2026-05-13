@@ -12,42 +12,41 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<div class="page-shell" id="top">
+<div class="page-shell">
   <header class="site-header" data-header>
     <button class="icon-btn" data-menu-toggle aria-label="Открыть меню"><span></span><span></span></button>
-    <a class="logo" href="#top" aria-label="CUCINA"><img src="assets/img/logo.png" alt="CUCINA · Мой дом · Моя кухня"></a>
+    <a class="logo" href="#" aria-label="CUCINA"><img src="assets/img/logo.png" alt="CUCINA"></a>
     <div class="header-actions">
       <a class="icon-btn phone-btn" href="tel:+74951234567" aria-label="Позвонить">✆</a>
       <button class="btn btn-small" data-open-modal>Рассчитать проект</button>
     </div>
   </header>
 
-  <nav class="mobile-menu" data-mobile-menu aria-label="Навигация">
+  <nav class="mobile-menu" data-mobile-menu>
     <a href="#">Проекты</a><a href="#">Кухни</a><a href="#">Материалы</a><a href="#">Фабрика</a><a href="#">Как мы работаем</a><a href="#">Шоурум</a><a href="#">Контакты</a>
   </nav>
 
   <main class="showcase">
-    <section class="brand-block reveal">
+    <section class="hero reveal">
       <p class="eyebrow">Москва и область</p>
       <h1>Кухни и мебель на заказ</h1>
       <p class="lead">Собственная фабрика. Проектирование, производство и монтаж под ключ в Москве и области.</p>
-      <div class="hero-actions"><button class="btn" data-open-modal>Рассчитать проект</button></div>
+      <button class="btn" data-open-modal>Рассчитать проект</button>
       <ul class="facts"><li>Собственная фабрика</li><li>20 лет опыта</li><li>Полный цикл</li></ul>
-      <div class="graphic" aria-hidden="true"><span></span><span></span><span></span></div>
     </section>
 
     <section class="modules reveal delay-1">
-      <a class="module primary" href="#"><span>Проекты и цены</span></a>
-      <a class="module primary" href="#"><span>Кухни</span></a>
-      <article class="module factory">
+      <a class="card card-primary" href="#">Проекты и цены</a>
+      <a class="card card-primary" href="#">Кухни</a>
+      <article class="card card-factory">
         <h2>Собственная фабрика</h2>
         <p>Контролируем производство, материалы, сроки и монтаж внутри компании.</p>
-        <div class="mini-stats"><span>20 000 м²</span><span>20 лет</span><span>Полный цикл</span></div>
+        <div class="stats"><span>20 000 м²</span><span>20 лет</span><span>Полный цикл</span></div>
       </article>
-      <a class="module secondary" href="#"><span>Материалы</span></a>
-      <a class="module secondary" href="#"><span>Как мы работаем</span></a>
-      <a class="module secondary" href="#"><span>Шоурум</span></a>
-      <button class="module cta" data-open-modal><span>Заявка на расчет</span></button>
+      <a class="card" href="#">Материалы</a>
+      <a class="card" href="#">Как мы работаем</a>
+      <a class="card" href="#">Шоурум</a>
+      <button class="card card-cta" data-open-modal>Заявка на расчет</button>
     </section>
   </main>
 </div>
