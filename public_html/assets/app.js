@@ -20,31 +20,21 @@ mobileMenu?.querySelectorAll('a, button').forEach((item) => {
   });
 });
 
-function openModal() {
+const openModal = () => {
   modal?.classList.add('is-open');
-  modal?.setAttribute('aria-hidden', 'false');
   body.classList.add('modal-open');
-}
+};
 
-function closeModal() {
+const closeModal = () => {
   modal?.classList.remove('is-open');
-  modal?.setAttribute('aria-hidden', 'true');
   body.classList.remove('modal-open');
-}
+};
 
-document.querySelectorAll('[data-open-modal]').forEach((button) => button.addEventListener('click', openModal));
-document.querySelectorAll('[data-close-modal]').forEach((button) => button.addEventListener('click', closeModal));
-document.addEventListener('keydown', (event) => {
+document.querySelectorAll('[data-open-modal]').forEach((btn) => btn.addEventListener('click', openModal));
+document.querySelectorAll('[data-close-modal]').forEach((btn) => btn.addEventListener('click', closeModal));
+
+window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') closeModal();
-});
-
-document.querySelectorAll('[data-variant]').forEach((button) => {
-  button.addEventListener('click', () => {
-    const variant = button.dataset.variant;
-    document.querySelectorAll('[data-variant]').forEach((btn) => btn.classList.toggle('is-active', btn === button));
-    document.querySelectorAll('[data-hero]').forEach((hero) => hero.classList.toggle('is-active', hero.dataset.hero === variant));
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
 });
 
 const observer = new IntersectionObserver((entries) => {
@@ -54,20 +44,22 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.15 });
 
 document.querySelectorAll('.reveal').forEach((node) => observer.observe(node));
 
 document.querySelectorAll('[data-lead-form]').forEach((form) => {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    const phone = form.querySelector('input[type="tel"]');
-    if (!phone?.value.trim()) return;
-    const original = form.querySelector('button[type="submit"]').textContent;
-    form.querySelector('button[type="submit"]').textContent = 'Заявка подготовлена';
+    const button = form.querySelector('button[type="submit"]');
+    if (!button) return;
+    const original = button.textContent;
+    button.textContent = 'Заявка отправлена';
+    button.disabled = true;
     setTimeout(() => {
       form.reset();
-      form.querySelector('button[type="submit"]').textContent = original;
+      button.disabled = false;
+      button.textContent = original;
       closeModal();
     }, 1200);
   });
