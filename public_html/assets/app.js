@@ -9,8 +9,8 @@ menuToggle?.addEventListener('click', () => {
   mobileMenu?.classList.toggle('is-open');
 });
 
-mobileMenu?.querySelectorAll('a').forEach((item) => {
-  item.addEventListener('click', () => {
+mobileMenu?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
     body.classList.remove('menu-open');
     mobileMenu.classList.remove('is-open');
   });
@@ -23,6 +23,14 @@ phoneToggle?.addEventListener('click', (event) => {
 
 document.addEventListener('click', (event) => {
   if (!phoneWrap?.contains(event.target)) phoneWrap?.classList.remove('is-open');
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    body.classList.remove('menu-open');
+    mobileMenu?.classList.remove('is-open');
+    phoneWrap?.classList.remove('is-open');
+  }
 });
 
 const observer = new IntersectionObserver((entries) => {
