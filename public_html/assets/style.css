@@ -70,10 +70,10 @@
   .card-meeting .feature-card-title,.card-max .feature-card-title{opacity:.92}
   .card-meeting .card-link,.card-max .card-link{opacity:.88}
   .card-max .feature-card-title{opacity:1;text-shadow:0 2px 6px rgba(0,0,0,.66)}
-  .card-max::after{background:linear-gradient(90deg,rgba(2,5,9,.80) 0%,rgba(2,5,9,.58) 44%,rgba(2,5,9,.25) 76%,rgba(2,5,9,.08) 100%)}
+  .card-max::after{background:linear-gradient(90deg,rgba(2,5,9,.64) 0%,rgba(2,5,9,.44) 44%,rgba(2,5,9,.18) 76%,rgba(2,5,9,.05) 100%)}
 
-  .card-vk,.card-dzen{background-image:none!important;background:radial-gradient(120% 120% at 78% 20%,rgba(45,55,72,.22),transparent 48%),linear-gradient(135deg,rgba(18,24,34,.78),rgba(9,14,22,.72))!important;--card-scale:.94}
-  .card-vk::after,.card-dzen::after{background:linear-gradient(90deg,rgba(5,8,13,.46),rgba(5,8,13,.30))}
+  .card-vk{background-image:linear-gradient(135deg,rgba(8,12,18,.48),rgba(8,12,18,.30)),url("img/bg/vk.png")!important;background-size:cover!important;background-position:center!important;--card-scale:.94}.card-dzen{background-image:linear-gradient(135deg,rgba(8,12,18,.48),rgba(8,12,18,.30)),url("img/bg/dzen.png")!important;background-size:cover!important;background-position:center!important;--card-scale:.94}
+  .card-vk::after,.card-dzen::after{background:linear-gradient(90deg,rgba(5,8,13,.24),rgba(5,8,13,.10))}
   .card-vk .brand-icon,.card-dzen .brand-icon{opacity:.74}
 
   .card-showroom,.card-service,.card-video,.card-designers,.card-wesen{--card-scale:.945}
