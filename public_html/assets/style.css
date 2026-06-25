@@ -72,13 +72,13 @@
   .card-max .feature-card-title{opacity:1;text-shadow:0 2px 6px rgba(0,0,0,.66)}
   .card-max::after{background:linear-gradient(90deg,rgba(2,5,9,.64) 0%,rgba(2,5,9,.44) 44%,rgba(2,5,9,.18) 76%,rgba(2,5,9,.05) 100%)}
 
-  .card-vk{background-image:linear-gradient(135deg,rgba(8,12,18,.48),rgba(8,12,18,.30)),url("img/bg/vk.png")!important;background-size:cover!important;background-position:center!important;--card-scale:.94}.card-dzen{background-image:linear-gradient(135deg,rgba(8,12,18,.48),rgba(8,12,18,.30)),url("img/bg/dzen.png")!important;background-size:cover!important;background-position:center!important;--card-scale:.94}
-  .card-vk::after,.card-dzen::after{background:linear-gradient(90deg,rgba(5,8,13,.24),rgba(5,8,13,.10))}
+  .card-vk{background-image:linear-gradient(135deg,rgba(8,12,18,.36),rgba(8,12,18,.24)),url("img/bg/vk.png")!important;background-size:cover!important;background-position:78% center!important;--card-scale:.94}.card-dzen{background-image:linear-gradient(135deg,rgba(8,12,18,.36),rgba(8,12,18,.24)),url("img/bg/dzen.png")!important;background-size:cover!important;background-position:72% center!important;--card-scale:.94}
+  .card-vk::after,.card-dzen::after{background:linear-gradient(90deg,rgba(5,8,13,.18),rgba(5,8,13,.06))}
   .card-vk .brand-icon,.card-dzen .brand-icon{opacity:.74}
 
   .card-showroom,.card-service,.card-video,.card-designers,.card-wesen{--card-scale:.945}
   .card-showroom::after{background:linear-gradient(90deg,rgba(8,12,18,.54) 0%,rgba(8,12,18,.34) 42%,rgba(8,12,18,.13) 74%,rgba(8,12,18,.04) 100%)}
-  .card-service::after{background:linear-gradient(90deg,rgba(8,12,18,.28) 0%,rgba(8,12,18,.17) 44%,rgba(8,12,18,.06) 76%,rgba(8,12,18,.02) 100%)}
+  .card-service::after{background:linear-gradient(90deg,rgba(8,12,18,.22) 0%,rgba(8,12,18,.14) 44%,rgba(8,12,18,.05) 76%,rgba(8,12,18,.015) 100%)}
   .card-video::after{background:linear-gradient(90deg,rgba(7,11,17,.76) 0%,rgba(7,11,17,.56) 44%,rgba(7,11,17,.26) 76%,rgba(7,11,17,.09) 100%)}
 
   .card-designers::after{background:linear-gradient(90deg,rgba(6,10,16,.74) 0%,rgba(6,10,16,.54) 42%,rgba(6,10,16,.24) 74%,rgba(6,10,16,.08) 100%)}
