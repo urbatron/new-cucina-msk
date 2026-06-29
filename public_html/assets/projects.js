@@ -6,7 +6,6 @@ const catalogState = {
 
 const catalogNodes = {
   grid: document.querySelector('[data-project-grid]'),
-  count: document.querySelector('[data-project-count]'),
   pagination: document.querySelector('[data-project-pagination]'),
   filters: document.querySelector('.catalog-filters'),
   modal: document.querySelector('[data-project-modal]'),
@@ -63,17 +62,6 @@ function setPage(page) {
   renderCatalog();
 }
 
-function renderCount() {
-  const total = catalogState.projects.length;
-  if (!total) {
-    catalogNodes.count.textContent = 'Проекты не найдены';
-    return;
-  }
-
-  const start = (catalogState.page - 1) * catalogState.pageSize + 1;
-  const end = Math.min(catalogState.page * catalogState.pageSize, total);
-  catalogNodes.count.textContent = `Показано ${start}–${end} из ${total} проектов`;
-}
 
 function renderGrid() {
   catalogNodes.grid.innerHTML = visibleProjects().map((project, index) => {
@@ -124,7 +112,6 @@ function renderPagination() {
 }
 
 function renderCatalog() {
-  renderCount();
   renderGrid();
   renderPagination();
 }
@@ -204,5 +191,5 @@ fetch('../assets/data/projects.json')
     renderCatalog();
   })
   .catch(() => {
-    catalogNodes.count.textContent = 'Проекты временно недоступны';
+    catalogNodes.grid.innerHTML = '<p class="catalog-error">Проекты временно недоступны</p>';
   });
