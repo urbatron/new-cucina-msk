@@ -1,98 +1,184 @@
-const projectState = {
+const catalogState = {
   projects: [],
-  index: 0,
-  photoIndex: 0,
+  page: 1,
+  pageSize: 12,
 };
 
-const projectNodes = {
-  mainPhoto: document.querySelector('[data-project-main-photo]'),
-  thumbs: document.querySelector('[data-project-thumbs]'),
-  question: document.querySelector('[data-project-question]'),
-  answer: document.querySelector('[data-project-answer]'),
-  title: document.querySelector('[data-project-title]'),
-  task: document.querySelector('[data-project-task]'),
-  address: document.querySelector('[data-project-address]'),
-  sizes: document.querySelector('[data-project-sizes]'),
-  materials: document.querySelector('[data-project-materials]'),
-  price: document.querySelector('[data-project-price]'),
-  benefit: document.querySelector('[data-project-benefit]'),
-  note: document.querySelector('[data-project-note]'),
-  cta: document.querySelector('[data-project-cta]'),
-  counter: document.querySelector('[data-project-counter]'),
-  rail: document.querySelector('[data-project-rail]'),
-  prev: document.querySelector('[data-project-prev]'),
-  next: document.querySelector('[data-project-next]'),
+const catalogNodes = {
+  grid: document.querySelector('[data-project-grid]'),
+  count: document.querySelector('[data-project-count]'),
+  pagination: document.querySelector('[data-project-pagination]'),
+  modal: document.querySelector('[data-project-modal]'),
+  modalImage: document.querySelector('[data-modal-image]'),
+  modalTitle: document.querySelector('[data-modal-title]'),
+  modalDescription: document.querySelector('[data-modal-description]'),
+  modalFacts: document.querySelector('[data-modal-facts]'),
+  modalCta: document.querySelector('[data-modal-cta]'),
 };
 
+const consultationUrl = 'https://n1251174.yclients.com';
 const assetPath = (path) => `../${path}`;
 
-function setProject(index) {
-  if (!projectState.projects.length) return;
-
-  projectState.index = (index + projectState.projects.length) % projectState.projects.length;
-  projectState.photoIndex = 0;
-  renderProject();
+function getPageSize() {
+  if (window.matchMedia('(max-width: 640px)').matches) return 6;
+  if (window.matchMedia('(max-width: 1024px)').matches) return 8;
+  return 12;
 }
 
-function setProjectPhoto(index) {
-  const project = projectState.projects[projectState.index];
-  projectState.photoIndex = (index + project.photos.length) % project.photos.length;
-  renderProjectPhoto(project);
+function compactAddress(address) {
+  return address.replace(/^г\.\s*/i, '');
 }
 
-function renderProjectPhoto(project) {
-  const currentPhoto = project.photos[projectState.photoIndex];
-  projectNodes.mainPhoto.src = assetPath(currentPhoto);
-  projectNodes.mainPhoto.alt = project.title;
-
-  projectNodes.thumbs.innerHTML = project.photos.map((photo, index) => `
-    <button class="project-thumb${index === projectState.photoIndex ? ' is-active' : ''}" type="button" data-photo-index="${index}" aria-label="Фото ${index + 1}: ${project.title}">
-      <img src="${assetPath(photo)}" alt="">
-    </button>
-  `).join('');
+function projectDescription(project) {
+  return project.task || project.answer || project.note || '';
 }
 
-function renderProjectRail() {
-  projectNodes.rail.innerHTML = projectState.projects.map((project, index) => `
-    <button class="project-pill${index === projectState.index ? ' is-active' : ''}" type="button" data-project-index="${index}">
-      <span>${String(index + 1).padStart(2, '0')}</span>
-      ${project.title}
-    </button>
-  `).join('');
+function projectDimensions(project) {
+  return Array.isArray(project.sizes) ? project.sizes.join(', ') : project.sizes;
 }
 
-function renderProject() {
-  const project = projectState.projects[projectState.index];
-
-  renderProjectPhoto(project);
-  renderProjectRail();
-
-  projectNodes.question.textContent = project.question;
-  projectNodes.answer.textContent = project.answer;
-  projectNodes.title.textContent = project.title;
-  projectNodes.task.textContent = project.task;
-  projectNodes.address.textContent = project.address;
-  projectNodes.sizes.textContent = project.sizes.join(', ');
-  projectNodes.materials.textContent = project.materials;
-  projectNodes.price.textContent = project.price;
-  projectNodes.benefit.textContent = project.benefit;
-  projectNodes.note.textContent = project.note;
-  projectNodes.cta.textContent = project.ctaText;
-  projectNodes.cta.href = project.ctaUrl;
-  projectNodes.counter.textContent = `${projectState.index + 1} / ${projectState.projects.length}`;
+function visibleProjects() {
+  const start = (catalogState.page - 1) * catalogState.pageSize;
+  return catalogState.projects.slice(start, start + catalogState.pageSize);
 }
 
-projectNodes.prev?.addEventListener('click', () => setProject(projectState.index - 1));
-projectNodes.next?.addEventListener('click', () => setProject(projectState.index + 1));
+function totalPages() {
+  return Math.max(1, Math.ceil(catalogState.projects.length / catalogState.pageSize));
+}
 
-projectNodes.thumbs?.addEventListener('click', (event) => {
-  const button = event.target.closest('[data-photo-index]');
-  if (button) setProjectPhoto(Number(button.dataset.photoIndex));
+function setPage(page) {
+  catalogState.page = Math.min(Math.max(page, 1), totalPages());
+  renderCatalog();
+}
+
+function renderCount() {
+  const total = catalogState.projects.length;
+  if (!total) {
+    catalogNodes.count.textContent = 'Проекты не найдены';
+    return;
+  }
+
+  const start = (catalogState.page - 1) * catalogState.pageSize + 1;
+  const end = Math.min(catalogState.page * catalogState.pageSize, total);
+  catalogNodes.count.textContent = `Показано ${start}–${end} из ${total} проектов`;
+}
+
+function renderGrid() {
+  catalogNodes.grid.innerHTML = visibleProjects().map((project, index) => {
+    const globalIndex = (catalogState.page - 1) * catalogState.pageSize + index;
+    const image = project.photos?.[0] || '';
+
+    return `
+      <article class="project-card card">
+        <button class="project-card__image" type="button" data-project-detail="${globalIndex}" aria-label="Смотреть проект: ${project.title}">
+          <img src="${assetPath(image)}" alt="${project.title}">
+        </button>
+        <div class="project-card__body">
+          <h2>${project.title}</h2>
+          <p>${projectDescription(project)}</p>
+          <div class="project-card__price">${project.price}</div>
+          <dl class="project-card__meta">
+            <div><dt>Адрес</dt><dd>${compactAddress(project.address)}</dd></div>
+            <div><dt>Размеры</dt><dd>${projectDimensions(project)}</dd></div>
+            <div><dt>Материалы</dt><dd>${project.materials}</dd></div>
+          </dl>
+          <div class="project-card__actions">
+            <button class="project-card__more" type="button" data-project-detail="${globalIndex}">Смотреть проект</button>
+            <a class="project-card__consult" href="${project.ctaUrl || consultationUrl}" target="_blank" rel="noopener">Записаться</a>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join('');
+}
+
+function pageNumbers() {
+  const pages = totalPages();
+  const numbers = new Set([1, pages, catalogState.page - 1, catalogState.page, catalogState.page + 1]);
+  return [...numbers].filter((page) => page >= 1 && page <= pages).sort((a, b) => a - b);
+}
+
+function renderPagination() {
+  const pages = totalPages();
+  if (catalogState.projects.length <= catalogState.pageSize) {
+    catalogNodes.pagination.innerHTML = '';
+    return;
+  }
+
+  const numbers = pageNumbers();
+  const buttons = numbers.map((page, index) => {
+    const gap = index > 0 && page - numbers[index - 1] > 1 ? '<span class="pagination-gap">…</span>' : '';
+    return `${gap}<button class="pagination-page${page === catalogState.page ? ' is-active' : ''}" type="button" data-page="${page}">${page}</button>`;
+  }).join('');
+
+  catalogNodes.pagination.innerHTML = `
+    <button class="pagination-step" type="button" data-page="${catalogState.page - 1}" ${catalogState.page === 1 ? 'disabled' : ''}>Назад</button>
+    ${buttons}
+    <button class="pagination-step" type="button" data-page="${catalogState.page + 1}" ${catalogState.page === pages ? 'disabled' : ''}>Вперёд</button>
+  `;
+}
+
+function renderCatalog() {
+  renderCount();
+  renderGrid();
+  renderPagination();
+}
+
+function modalFacts(project) {
+  return [
+    ['Адрес', project.address],
+    ['Размеры', projectDimensions(project)],
+    ['Материалы', project.materials],
+    ['Стоимость', project.price],
+    ['Выгода клиента', project.benefit],
+  ];
+}
+
+function openProjectDetail(index) {
+  const project = catalogState.projects[index];
+  if (!project) return;
+
+  catalogNodes.modalImage.src = assetPath(project.photos?.[0] || '');
+  catalogNodes.modalImage.alt = project.title;
+  catalogNodes.modalTitle.textContent = project.title;
+  catalogNodes.modalDescription.textContent = project.note || projectDescription(project);
+  catalogNodes.modalFacts.innerHTML = modalFacts(project).map(([label, value]) => `<div><dt>${label}</dt><dd>${value}</dd></div>`).join('');
+  catalogNodes.modalCta.href = project.ctaUrl || consultationUrl;
+  catalogNodes.modal.classList.add('is-open');
+  catalogNodes.modal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('has-open-modal');
+}
+
+function closeProjectDetail() {
+  catalogNodes.modal.classList.remove('is-open');
+  catalogNodes.modal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('has-open-modal');
+}
+
+catalogNodes.grid?.addEventListener('click', (event) => {
+  const trigger = event.target.closest('[data-project-detail]');
+  if (trigger) openProjectDetail(Number(trigger.dataset.projectDetail));
 });
 
-projectNodes.rail?.addEventListener('click', (event) => {
-  const button = event.target.closest('[data-project-index]');
-  if (button) setProject(Number(button.dataset.projectIndex));
+catalogNodes.pagination?.addEventListener('click', (event) => {
+  const trigger = event.target.closest('[data-page]');
+  if (trigger) setPage(Number(trigger.dataset.page));
+});
+
+catalogNodes.modal?.addEventListener('click', (event) => {
+  if (event.target.closest('[data-modal-close]')) closeProjectDetail();
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeProjectDetail();
+});
+
+window.addEventListener('resize', () => {
+  const nextSize = getPageSize();
+  if (nextSize === catalogState.pageSize) return;
+  catalogState.pageSize = nextSize;
+  catalogState.page = Math.min(catalogState.page, totalPages());
+  renderCatalog();
 });
 
 fetch('../assets/data/projects.json')
@@ -101,9 +187,10 @@ fetch('../assets/data/projects.json')
     return response.json();
   })
   .then((projects) => {
-    projectState.projects = projects;
-    setProject(0);
+    catalogState.projects = projects;
+    catalogState.pageSize = getPageSize();
+    renderCatalog();
   })
   .catch(() => {
-    if (projectNodes.title) projectNodes.title.textContent = 'Проекты временно недоступны';
+    catalogNodes.count.textContent = 'Проекты временно недоступны';
   });

@@ -14,7 +14,7 @@
 <div class="page-shell projects-shell">
   <header class="site-header header">
     <a class="back-link" href="../" aria-label="Вернуться на главную">
-      <span class="link-arrow link-arrow--back" aria-hidden="true"><svg class="icon icon--stroke" viewBox="0 0 24 24"><path d="M20 12H4"/><path d="m10 7-5 5 5 5"/></svg></span>
+      <span aria-hidden="true">←</span>
       Главная
     </a>
     <a class="logo" href="../" aria-label="CUCINA"><img src="../assets/img/logo.png" alt="CUCINA"></a>
@@ -28,51 +28,36 @@
     </div>
   </header>
 
-  <main class="projects-main reveal" aria-label="Примеры проектов с ценами">
-    <section class="projects-hero card" data-project-card>
-      <div class="projects-media">
-        <img class="projects-main-photo" data-project-main-photo src="" alt="">
-        <div class="projects-photo-overlay">
-          <p data-project-question></p>
-          <span data-project-answer></span>
-        </div>
-        <div class="projects-thumbs" data-project-thumbs aria-label="Мини-галерея проекта"></div>
+  <main class="projects-catalog reveal" aria-label="Каталог проектов с ценами">
+    <section class="catalog-head">
+      <div>
+        <h1>Примеры проектов с ценами</h1>
+        <p>Реальные проекты CUCINA с материалами, размерами и итоговой стоимостью.</p>
       </div>
-
-      <article class="projects-info">
-        <div class="projects-kicker">Реальный проект CUCINA</div>
-        <h1 data-project-title>Примеры проектов с ценами</h1>
-        <p class="projects-task" data-project-task></p>
-
-        <div class="projects-facts">
-          <div class="projects-fact"><span>Адрес</span><strong data-project-address></strong></div>
-          <div class="projects-fact"><span>Размеры</span><strong data-project-sizes></strong></div>
-          <div class="projects-fact"><span>Материалы</span><strong data-project-materials></strong></div>
-          <div class="projects-fact projects-fact--accent"><span>Стоимость</span><strong data-project-price></strong></div>
-          <div class="projects-fact projects-fact--accent"><span>Выгода клиента</span><strong data-project-benefit></strong></div>
-        </div>
-
-        <p class="projects-note" data-project-note></p>
-
-        <div class="projects-actions">
-          <a class="project-cta" data-project-cta target="_blank" rel="noopener">Записаться на консультацию</a>
-          <div class="project-switch" aria-label="Переключение между проектами">
-            <button class="project-arrow" type="button" data-project-prev aria-label="Предыдущий проект"><svg class="icon icon--stroke" viewBox="0 0 24 24"><path d="M20 12H4"/><path d="m10 7-5 5 5 5"/></svg></button>
-            <span data-project-counter></span>
-            <button class="project-arrow" type="button" data-project-next aria-label="Следующий проект"><svg class="icon icon--stroke" viewBox="0 0 24 24"><path d="M4 12h16"/><path d="m14 7 5 5-5 5"/></svg></button>
-          </div>
-        </div>
-      </article>
+      <span class="catalog-count" data-project-count></span>
     </section>
 
-    <aside class="projects-rail" data-project-rail aria-label="Лента проектов"></aside>
+    <section class="projects-grid" data-project-grid aria-live="polite"></section>
 
-    <footer class="projects-contacts" aria-label="Контакты салонов">
-      <span>Москва, 24-й км МКАД, ТК “Твой Дом” Каширский, 1-й вход, 2-й этаж: CUCINA +7 (930) 012-91-78, Wesen +7 (930) 012-91-79</span>
-      <span>Красногорск, МКАД, 66-й км, ул. Международная д.4, ТЦ “Крокус-Сити Твой дом”, 2 корпус, 2 этаж: CUCINA +7 (930) 012-91-77</span>
-    </footer>
+    <nav class="catalog-pagination" data-project-pagination aria-label="Пагинация проектов"></nav>
   </main>
 </div>
+
+<div class="project-modal" data-project-modal aria-hidden="true">
+  <div class="project-modal__backdrop" data-modal-close></div>
+  <article class="project-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+    <button class="project-modal__close" type="button" data-modal-close aria-label="Закрыть">×</button>
+    <img class="project-modal__image" data-modal-image src="" alt="">
+    <div class="project-modal__content">
+      <p class="project-modal__eyebrow">Проект CUCINA</p>
+      <h2 id="project-modal-title" data-modal-title></h2>
+      <p data-modal-description></p>
+      <dl data-modal-facts></dl>
+      <a class="project-modal__cta" data-modal-cta target="_blank" rel="noopener">Записаться на консультацию</a>
+    </div>
+  </article>
+</div>
+
 <script src="../assets/app.js"></script>
 <script src="../assets/projects.js"></script>
 </body>
