@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "project-001",
+    "title": "Шкаф и рабочее место для спальни",
+    "question": "Почему мебель на заказ выглядит гармоничнее готовых решений?",
+    "answer": "Потому что она создается под конкретное пространство.",
+    "address": "г. Москва, 2-я Хуторская улица",
+    "task": "Вместительный шкаф для одежды и компактное рабочее место без перегрузки интерьера.",
+    "sizes": ["Высота 2800 мм", "Длина 3370 мм", "Глубина 600 мм"],
+    "materials": "пленка ПВХ и FeelWood",
+    "price": "257 200 руб.",
+    "benefit": "35 720 руб.",
+    "note": "Дизайнер заказчика Нина Шуберт подобрала цвета, фактуры и декор; CUCINA точно реализовала проект.",
+    "ctaText": "Записаться на консультацию",
+    "ctaUrl": "https://n1251174.yclients.com",
+    "photos": [
+      "assets/img/projects/project-001/1.jpg",
+      "assets/img/projects/project-001/2.jpg",
+      "assets/img/projects/project-001/3.jpg",
+      "assets/img/projects/project-001/4.jpg",
+      "assets/img/projects/project-001/5.jpg"
+    ]
+  },
+  {
+    "slug": "project-002",
+    "title": "Современная кухня длиной более 6 метров",
+    "question": "Сколько стоит современная кухня длиной более 6 метров?",
+    "answer": "Показываем реальный проект, завершенный в апреле 2026 года.",
+    "address": "г. Москва, ул. Николая Озерова",
+    "task": "Цельная кухня с архитектурной эстетикой и ощущением натуральных материалов.",
+    "sizes": ["Длина 6200 мм", "Высота 2760 мм"],
+    "materials": "PerfectSense и FeelWood",
+    "price": "646 343 руб.",
+    "benefit": "82 134 руб.",
+    "note": "Спокойное сочетание фактур выглядит актуально вне зависимости от краткосрочных трендов.",
+    "ctaText": "Записаться на консультацию",
+    "ctaUrl": "https://n1251174.yclients.com",
+    "photos": [
+      "assets/img/projects/project-002/1.jpg",
+      "assets/img/projects/project-002/2.jpg",
+      "assets/img/projects/project-002/3.jpg",
+      "assets/img/projects/project-002/4.jpg",
+      "assets/img/projects/project-002/5.jpg"
+    ]
+  }
+]

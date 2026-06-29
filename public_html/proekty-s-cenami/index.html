@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Примеры проектов с ценами — CUCINA</title>
+  <meta name="description" content="Реальные проекты CUCINA с фото, материалами, размерами, стоимостью и выгодой клиента.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="projects-page">
+<div class="page-shell projects-shell">
+  <header class="site-header header">
+    <a class="back-link" href="../" aria-label="Вернуться на главную">
+      <span class="link-arrow link-arrow--back" aria-hidden="true"><svg class="icon icon--stroke" viewBox="0 0 24 24"><path d="M20 12H4"/><path d="m10 7-5 5 5 5"/></svg></span>
+      Главная
+    </a>
+    <a class="logo" href="../" aria-label="CUCINA"><img src="../assets/img/logo.png" alt="CUCINA"></a>
+    <div class="phone-wrap">
+      <button class="icon-btn phone-toggle" data-phone-toggle aria-label="Показать телефон">
+        <svg class="icon icon--stroke icon--white" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4.8 5.8c0 7.4 6 13.4 13.4 13.4h1.4a1.7 1.7 0 0 0 1.7-1.5l.4-3.2a1.7 1.7 0 0 0-1-1.8l-3-1.3a1.7 1.7 0 0 0-1.9.5l-1.2 1.5a13 13 0 0 1-4-4l1.5-1.2a1.7 1.7 0 0 0 .5-1.9L11.3 3.3a1.7 1.7 0 0 0-1.8-1l-3.2.4A1.7 1.7 0 0 0 4.8 4.4v1.4Z"/>
+        </svg>
+      </button>
+      <a class="phone-badge" data-phone-badge href="tel:+74952152015" aria-label="Позвонить в CUCINA">+7 (495) 215-20-15</a>
+    </div>
+  </header>
+
+  <main class="projects-main reveal" aria-label="Примеры проектов с ценами">
+    <section class="projects-hero card" data-project-card>
+      <div class="projects-media">
+        <img class="projects-main-photo" data-project-main-photo src="" alt="">
+        <div class="projects-photo-overlay">
+          <p data-project-question></p>
+          <span data-project-answer></span>
+        </div>
+        <div class="projects-thumbs" data-project-thumbs aria-label="Мини-галерея проекта"></div>
+      </div>
+
+      <article class="projects-info">
+        <div class="projects-kicker">Реальный проект CUCINA</div>
+        <h1 data-project-title>Примеры проектов с ценами</h1>
+        <p class="projects-task" data-project-task></p>
+
+        <div class="projects-facts">
+          <div class="projects-fact"><span>Адрес</span><strong data-project-address></strong></div>
+          <div class="projects-fact"><span>Размеры</span><strong data-project-sizes></strong></div>
+          <div class="projects-fact"><span>Материалы</span><strong data-project-materials></strong></div>
+          <div class="projects-fact projects-fact--accent"><span>Стоимость</span><strong data-project-price></strong></div>
+          <div class="projects-fact projects-fact--accent"><span>Выгода клиента</span><strong data-project-benefit></strong></div>
+        </div>
+
+        <p class="projects-note" data-project-note></p>
+
+        <div class="projects-actions">
+          <a class="project-cta" data-project-cta target="_blank" rel="noopener">Записаться на консультацию</a>
+          <div class="project-switch" aria-label="Переключение между проектами">
+            <button class="project-arrow" type="button" data-project-prev aria-label="Предыдущий проект"><svg class="icon icon--stroke" viewBox="0 0 24 24"><path d="M20 12H4"/><path d="m10 7-5 5 5 5"/></svg></button>
+            <span data-project-counter></span>
+            <button class="project-arrow" type="button" data-project-next aria-label="Следующий проект"><svg class="icon icon--stroke" viewBox="0 0 24 24"><path d="M4 12h16"/><path d="m14 7 5 5-5 5"/></svg></button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <aside class="projects-rail" data-project-rail aria-label="Лента проектов"></aside>
+
+    <footer class="projects-contacts" aria-label="Контакты салонов">
+      <span>Москва, 24-й км МКАД, ТК “Твой Дом” Каширский, 1-й вход, 2-й этаж: CUCINA +7 (930) 012-91-78, Wesen +7 (930) 012-91-79</span>
+      <span>Красногорск, МКАД, 66-й км, ул. Международная д.4, ТЦ “Крокус-Сити Твой дом”, 2 корпус, 2 этаж: CUCINA +7 (930) 012-91-77</span>
+    </footer>
+  </main>
+</div>
+<script src="../assets/app.js"></script>
+<script src="../assets/projects.js"></script>
+</body>
+</html>
