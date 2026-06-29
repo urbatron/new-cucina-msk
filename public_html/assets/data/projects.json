@@ -6,7 +6,11 @@
     "answer": "Потому что она создается под конкретное пространство.",
     "address": "г. Москва, 2-я Хуторская улица",
     "task": "Вместительный шкаф для одежды и компактное рабочее место без перегрузки интерьера.",
-    "sizes": ["Высота 2800 мм", "Длина 3370 мм", "Глубина 600 мм"],
+    "sizes": [
+      "Высота 2800 мм",
+      "Длина 3370 мм",
+      "Глубина 600 мм"
+    ],
     "materials": "пленка ПВХ и FeelWood",
     "price": "257 200 руб.",
     "benefit": "35 720 руб.",
@@ -28,7 +32,10 @@
     "answer": "Показываем реальный проект, завершенный в апреле 2026 года.",
     "address": "г. Москва, ул. Николая Озерова",
     "task": "Цельная кухня с архитектурной эстетикой и ощущением натуральных материалов.",
-    "sizes": ["Длина 6200 мм", "Высота 2760 мм"],
+    "sizes": [
+      "Длина 6200 мм",
+      "Высота 2760 мм"
+    ],
     "materials": "PerfectSense и FeelWood",
     "price": "646 343 руб.",
     "benefit": "82 134 руб.",
@@ -42,5 +49,350 @@
       "assets/img/projects/project-002/4.jpg",
       "assets/img/projects/project-002/5.jpg"
     ]
+  },
+  {
+    "slug": "project-test-003",
+    "title": "Проект 03 — Шкаф и рабочее место для спальни",
+    "question": "Почему мебель на заказ выглядит гармоничнее готовых решений?",
+    "answer": "Потому что она создается под конкретное пространство.",
+    "address": "г. Москва, 2-я Хуторская улица",
+    "task": "Вместительный шкаф для одежды и компактное рабочее место без перегрузки интерьера.",
+    "sizes": [
+      "Высота 2800 мм",
+      "Длина 3370 мм",
+      "Глубина 600 мм"
+    ],
+    "materials": "пленка ПВХ и FeelWood",
+    "price": "257 200 руб.",
+    "benefit": "35 720 руб.",
+    "note": "Дизайнер заказчика Нина Шуберт подобрала цвета, фактуры и декор; CUCINA точно реализовала проект.",
+    "ctaText": "Записаться на консультацию",
+    "ctaUrl": "https://n1251174.yclients.com",
+    "photos": [
+      "assets/img/projects/project-001/1.jpg",
+      "assets/img/projects/project-001/2.jpg",
+      "assets/img/projects/project-001/3.jpg",
+      "assets/img/projects/project-001/4.jpg",
+      "assets/img/projects/project-001/5.jpg"
+    ],
+    "testDuplicate": true
+  },
+  {
+    "slug": "project-test-004",
+    "title": "Проект 04 — Современная кухня длиной более 6 метров",
+    "question": "Сколько стоит современная кухня длиной более 6 метров?",
+    "answer": "Показываем реальный проект, завершенный в апреле 2026 года.",
+    "address": "г. Москва, ул. Николая Озерова",
+    "task": "Цельная кухня с архитектурной эстетикой и ощущением натуральных материалов.",
+    "sizes": [
+      "Длина 6200 мм",
+      "Высота 2760 мм"
+    ],
+    "materials": "PerfectSense и FeelWood",
+    "price": "646 343 руб.",
+    "benefit": "82 134 руб.",
+    "note": "Спокойное сочетание фактур выглядит актуально вне зависимости от краткосрочных трендов.",
+    "ctaText": "Записаться на консультацию",
+    "ctaUrl": "https://n1251174.yclients.com",
+    "photos": [
+      "assets/img/projects/project-002/1.jpg",
+      "assets/img/projects/project-002/2.jpg",
+      "assets/img/projects/project-002/3.jpg",
+      "assets/img/projects/project-002/4.jpg",
+      "assets/img/projects/project-002/5.jpg"
+    ],
+    "testDuplicate": true
+  },
+  {
+    "slug": "project-test-005",
+    "title": "Проект 05 — Шкаф и рабочее место для спальни",
+    "question": "Почему мебель на заказ выглядит гармоничнее готовых решений?",
+    "answer": "Потому что она создается под конкретное пространство.",
+    "address": "г. Москва, 2-я Хуторская улица",
+    "task": "Вместительный шкаф для одежды и компактное рабочее место без перегрузки интерьера.",
+    "sizes": [
+      "Высота 2800 мм",
+      "Длина 3370 мм",
+      "Глубина 600 мм"
+    ],
+    "materials": "пленка ПВХ и FeelWood",
+    "price": "257 200 руб.",
+    "benefit": "35 720 руб.",
+    "note": "Дизайнер заказчика Нина Шуберт подобрала цвета, фактуры и декор; CUCINA точно реализовала проект.",
+    "ctaText": "Записаться на консультацию",
+    "ctaUrl": "https://n1251174.yclients.com",
+    "photos": [
+      "assets/img/projects/project-001/1.jpg",
+      "assets/img/projects/project-001/2.jpg",
+      "assets/img/projects/project-001/3.jpg",
+      "assets/img/projects/project-001/4.jpg",
+      "assets/img/projects/project-001/5.jpg"
+    ],
+    "testDuplicate": true
+  },
+  {
+    "slug": "project-test-006",
+    "title": "Проект 06 — Современная кухня длиной более 6 метров",
+    "question": "Сколько стоит современная кухня длиной более 6 метров?",
+    "answer": "Показываем реальный проект, завершенный в апреле 2026 года.",
+    "address": "г. Москва, ул. Николая Озерова",
+    "task": "Цельная кухня с архитектурной эстетикой и ощущением натуральных материалов.",
+    "sizes": [
+      "Длина 6200 мм",
+      "Высота 2760 мм"
+    ],
+    "materials": "PerfectSense и FeelWood",
+    "price": "646 343 руб.",
+    "benefit": "82 134 руб.",
+    "note": "Спокойное сочетание фактур выглядит актуально вне зависимости от краткосрочных трендов.",
+    "ctaText": "Записаться на консультацию",
+    "ctaUrl": "https://n1251174.yclients.com",
+    "photos": [
+      "assets/img/projects/project-002/1.jpg",
+      "assets/img/projects/project-002/2.jpg",
+      "assets/img/projects/project-002/3.jpg",
+      "assets/img/projects/project-002/4.jpg",
+      "assets/img/projects/project-002/5.jpg"
+    ],
+    "testDuplicate": true
+  },
+  {
+    "slug": "project-test-007",
+    "title": "Проект 07 — Шкаф и рабочее место для спальни",
+    "question": "Почему мебель на заказ выглядит гармоничнее готовых решений?",
+    "answer": "Потому что она создается под конкретное пространство.",
+    "address": "г. Москва, 2-я Хуторская улица",
+    "task": "Вместительный шкаф для одежды и компактное рабочее место без перегрузки интерьера.",
+    "sizes": [
+      "Высота 2800 мм",
+      "Длина 3370 мм",
+      "Глубина 600 мм"
+    ],
+    "materials": "пленка ПВХ и FeelWood",
+    "price": "257 200 руб.",
+    "benefit": "35 720 руб.",
+    "note": "Дизайнер заказчика Нина Шуберт подобрала цвета, фактуры и декор; CUCINA точно реализовала проект.",
+    "ctaText": "Записаться на консультацию",
+    "ctaUrl": "https://n1251174.yclients.com",
+    "photos": [
+      "assets/img/projects/project-001/1.jpg",
+      "assets/img/projects/project-001/2.jpg",
+      "assets/img/projects/project-001/3.jpg",
+      "assets/img/projects/project-001/4.jpg",
+      "assets/img/projects/project-001/5.jpg"
+    ],
+    "testDuplicate": true
+  },
+  {
+    "slug": "project-test-008",
+    "title": "Проект 08 — Современная кухня длиной более 6 метров",
+    "question": "Сколько стоит современная кухня длиной более 6 метров?",
+    "answer": "Показываем реальный проект, завершенный в апреле 2026 года.",
+    "address": "г. Москва, ул. Николая Озерова",
+    "task": "Цельная кухня с архитектурной эстетикой и ощущением натуральных материалов.",
+    "sizes": [
+      "Длина 6200 мм",
+      "Высота 2760 мм"
+    ],
+    "materials": "PerfectSense и FeelWood",
+    "price": "646 343 руб.",
+    "benefit": "82 134 руб.",
+    "note": "Спокойное сочетание фактур выглядит актуально вне зависимости от краткосрочных трендов.",
+    "ctaText": "Записаться на консультацию",
+    "ctaUrl": "https://n1251174.yclients.com",
+    "photos": [
+      "assets/img/projects/project-002/1.jpg",
+      "assets/img/projects/project-002/2.jpg",
+      "assets/img/projects/project-002/3.jpg",
+      "assets/img/projects/project-002/4.jpg",
+      "assets/img/projects/project-002/5.jpg"
+    ],
+    "testDuplicate": true
+  },
+  {
+    "slug": "project-test-009",
+    "title": "Проект 09 — Шкаф и рабочее место для спальни",
+    "question": "Почему мебель на заказ выглядит гармоничнее готовых решений?",
+    "answer": "Потому что она создается под конкретное пространство.",
+    "address": "г. Москва, 2-я Хуторская улица",
+    "task": "Вместительный шкаф для одежды и компактное рабочее место без перегрузки интерьера.",
+    "sizes": [
+      "Высота 2800 мм",
+      "Длина 3370 мм",
+      "Глубина 600 мм"
+    ],
+    "materials": "пленка ПВХ и FeelWood",
+    "price": "257 200 руб.",
+    "benefit": "35 720 руб.",
+    "note": "Дизайнер заказчика Нина Шуберт подобрала цвета, фактуры и декор; CUCINA точно реализовала проект.",
+    "ctaText": "Записаться на консультацию",
+    "ctaUrl": "https://n1251174.yclients.com",
+    "photos": [
+      "assets/img/projects/project-001/1.jpg",
+      "assets/img/projects/project-001/2.jpg",
+      "assets/img/projects/project-001/3.jpg",
+      "assets/img/projects/project-001/4.jpg",
+      "assets/img/projects/project-001/5.jpg"
+    ],
+    "testDuplicate": true
+  },
+  {
+    "slug": "project-test-010",
+    "title": "Проект 10 — Современная кухня длиной более 6 метров",
+    "question": "Сколько стоит современная кухня длиной более 6 метров?",
+    "answer": "Показываем реальный проект, завершенный в апреле 2026 года.",
+    "address": "г. Москва, ул. Николая Озерова",
+    "task": "Цельная кухня с архитектурной эстетикой и ощущением натуральных материалов.",
+    "sizes": [
+      "Длина 6200 мм",
+      "Высота 2760 мм"
+    ],
+    "materials": "PerfectSense и FeelWood",
+    "price": "646 343 руб.",
+    "benefit": "82 134 руб.",
+    "note": "Спокойное сочетание фактур выглядит актуально вне зависимости от краткосрочных трендов.",
+    "ctaText": "Записаться на консультацию",
+    "ctaUrl": "https://n1251174.yclients.com",
+    "photos": [
+      "assets/img/projects/project-002/1.jpg",
+      "assets/img/projects/project-002/2.jpg",
+      "assets/img/projects/project-002/3.jpg",
+      "assets/img/projects/project-002/4.jpg",
+      "assets/img/projects/project-002/5.jpg"
+    ],
+    "testDuplicate": true
+  },
+  {
+    "slug": "project-test-011",
+    "title": "Проект 11 — Шкаф и рабочее место для спальни",
+    "question": "Почему мебель на заказ выглядит гармоничнее готовых решений?",
+    "answer": "Потому что она создается под конкретное пространство.",
+    "address": "г. Москва, 2-я Хуторская улица",
+    "task": "Вместительный шкаф для одежды и компактное рабочее место без перегрузки интерьера.",
+    "sizes": [
+      "Высота 2800 мм",
+      "Длина 3370 мм",
+      "Глубина 600 мм"
+    ],
+    "materials": "пленка ПВХ и FeelWood",
+    "price": "257 200 руб.",
+    "benefit": "35 720 руб.",
+    "note": "Дизайнер заказчика Нина Шуберт подобрала цвета, фактуры и декор; CUCINA точно реализовала проект.",
+    "ctaText": "Записаться на консультацию",
+    "ctaUrl": "https://n1251174.yclients.com",
+    "photos": [
+      "assets/img/projects/project-001/1.jpg",
+      "assets/img/projects/project-001/2.jpg",
+      "assets/img/projects/project-001/3.jpg",
+      "assets/img/projects/project-001/4.jpg",
+      "assets/img/projects/project-001/5.jpg"
+    ],
+    "testDuplicate": true
+  },
+  {
+    "slug": "project-test-012",
+    "title": "Проект 12 — Современная кухня длиной более 6 метров",
+    "question": "Сколько стоит современная кухня длиной более 6 метров?",
+    "answer": "Показываем реальный проект, завершенный в апреле 2026 года.",
+    "address": "г. Москва, ул. Николая Озерова",
+    "task": "Цельная кухня с архитектурной эстетикой и ощущением натуральных материалов.",
+    "sizes": [
+      "Длина 6200 мм",
+      "Высота 2760 мм"
+    ],
+    "materials": "PerfectSense и FeelWood",
+    "price": "646 343 руб.",
+    "benefit": "82 134 руб.",
+    "note": "Спокойное сочетание фактур выглядит актуально вне зависимости от краткосрочных трендов.",
+    "ctaText": "Записаться на консультацию",
+    "ctaUrl": "https://n1251174.yclients.com",
+    "photos": [
+      "assets/img/projects/project-002/1.jpg",
+      "assets/img/projects/project-002/2.jpg",
+      "assets/img/projects/project-002/3.jpg",
+      "assets/img/projects/project-002/4.jpg",
+      "assets/img/projects/project-002/5.jpg"
+    ],
+    "testDuplicate": true
+  },
+  {
+    "slug": "project-test-013",
+    "title": "Проект 13 — Шкаф и рабочее место для спальни",
+    "question": "Почему мебель на заказ выглядит гармоничнее готовых решений?",
+    "answer": "Потому что она создается под конкретное пространство.",
+    "address": "г. Москва, 2-я Хуторская улица",
+    "task": "Вместительный шкаф для одежды и компактное рабочее место без перегрузки интерьера.",
+    "sizes": [
+      "Высота 2800 мм",
+      "Длина 3370 мм",
+      "Глубина 600 мм"
+    ],
+    "materials": "пленка ПВХ и FeelWood",
+    "price": "257 200 руб.",
+    "benefit": "35 720 руб.",
+    "note": "Дизайнер заказчика Нина Шуберт подобрала цвета, фактуры и декор; CUCINA точно реализовала проект.",
+    "ctaText": "Записаться на консультацию",
+    "ctaUrl": "https://n1251174.yclients.com",
+    "photos": [
+      "assets/img/projects/project-001/1.jpg",
+      "assets/img/projects/project-001/2.jpg",
+      "assets/img/projects/project-001/3.jpg",
+      "assets/img/projects/project-001/4.jpg",
+      "assets/img/projects/project-001/5.jpg"
+    ],
+    "testDuplicate": true
+  },
+  {
+    "slug": "project-test-014",
+    "title": "Проект 14 — Современная кухня длиной более 6 метров",
+    "question": "Сколько стоит современная кухня длиной более 6 метров?",
+    "answer": "Показываем реальный проект, завершенный в апреле 2026 года.",
+    "address": "г. Москва, ул. Николая Озерова",
+    "task": "Цельная кухня с архитектурной эстетикой и ощущением натуральных материалов.",
+    "sizes": [
+      "Длина 6200 мм",
+      "Высота 2760 мм"
+    ],
+    "materials": "PerfectSense и FeelWood",
+    "price": "646 343 руб.",
+    "benefit": "82 134 руб.",
+    "note": "Спокойное сочетание фактур выглядит актуально вне зависимости от краткосрочных трендов.",
+    "ctaText": "Записаться на консультацию",
+    "ctaUrl": "https://n1251174.yclients.com",
+    "photos": [
+      "assets/img/projects/project-002/1.jpg",
+      "assets/img/projects/project-002/2.jpg",
+      "assets/img/projects/project-002/3.jpg",
+      "assets/img/projects/project-002/4.jpg",
+      "assets/img/projects/project-002/5.jpg"
+    ],
+    "testDuplicate": true
+  },
+  {
+    "slug": "project-test-015",
+    "title": "Проект 15 — Шкаф и рабочее место для спальни",
+    "question": "Почему мебель на заказ выглядит гармоничнее готовых решений?",
+    "answer": "Потому что она создается под конкретное пространство.",
+    "address": "г. Москва, 2-я Хуторская улица",
+    "task": "Вместительный шкаф для одежды и компактное рабочее место без перегрузки интерьера.",
+    "sizes": [
+      "Высота 2800 мм",
+      "Длина 3370 мм",
+      "Глубина 600 мм"
+    ],
+    "materials": "пленка ПВХ и FeelWood",
+    "price": "257 200 руб.",
+    "benefit": "35 720 руб.",
+    "note": "Дизайнер заказчика Нина Шуберт подобрала цвета, фактуры и декор; CUCINA точно реализовала проект.",
+    "ctaText": "Записаться на консультацию",
+    "ctaUrl": "https://n1251174.yclients.com",
+    "photos": [
+      "assets/img/projects/project-001/1.jpg",
+      "assets/img/projects/project-001/2.jpg",
+      "assets/img/projects/project-001/3.jpg",
+      "assets/img/projects/project-001/4.jpg",
+      "assets/img/projects/project-001/5.jpg"
+    ],
+    "testDuplicate": true
   }
 ]

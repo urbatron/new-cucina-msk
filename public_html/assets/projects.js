@@ -21,8 +21,8 @@ const assetPath = (path) => `../${path}`;
 
 function getPageSize() {
   if (window.matchMedia('(max-width: 640px)').matches) return 6;
-  if (window.matchMedia('(max-width: 1024px)').matches) return 8;
-  return 12;
+  if (window.matchMedia('(max-width: 1024px)').matches) return 6;
+  return 8;
 }
 
 function compactAddress(address) {
