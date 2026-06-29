@@ -30,11 +30,23 @@
 
   <main class="projects-catalog reveal" aria-label="Каталог проектов с ценами">
     <section class="catalog-head">
-      <div>
+      <div class="catalog-title">
         <h1>Примеры проектов с ценами</h1>
-        <p>Реальные проекты CUCINA с материалами, размерами и итоговой стоимостью.</p>
+        <p>Реальные кухни и мебель CUCINA: материалы, размеры и стоимость под ключ</p>
       </div>
-      <span class="catalog-count" data-project-count></span>
+      <div class="catalog-head__side">
+        <span class="catalog-count" data-project-count></span>
+        <a class="catalog-meeting" href="https://n1251174.yclients.com" target="_blank" rel="noopener">Записаться на встречу</a>
+      </div>
+    </section>
+
+    <section class="catalog-filters" aria-label="Фильтры проектов">
+      <button class="catalog-filter is-active" type="button" data-filter="all">Все</button>
+      <button class="catalog-filter" type="button" data-filter="kitchens">Кухни</button>
+      <button class="catalog-filter" type="button" data-filter="living">Гостиные</button>
+      <button class="catalog-filter" type="button" data-filter="wardrobes">Шкафы</button>
+      <button class="catalog-filter" type="button" data-filter="under-500">До 500 тыс.</button>
+      <button class="catalog-filter" type="button" data-filter="from-500">От 500 тыс.</button>
     </section>
 
     <section class="projects-grid" data-project-grid aria-live="polite"></section>

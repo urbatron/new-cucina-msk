@@ -8,6 +8,7 @@ const catalogNodes = {
   grid: document.querySelector('[data-project-grid]'),
   count: document.querySelector('[data-project-count]'),
   pagination: document.querySelector('[data-project-pagination]'),
+  filters: document.querySelector('.catalog-filters'),
   modal: document.querySelector('[data-project-modal]'),
   modalImage: document.querySelector('[data-modal-image]'),
   modalTitle: document.querySelector('[data-modal-title]'),
@@ -22,7 +23,8 @@ const assetPath = (path) => `../${path}`;
 function getPageSize() {
   if (window.matchMedia('(max-width: 640px)').matches) return 6;
   if (window.matchMedia('(max-width: 1024px)').matches) return 6;
-  return 8;
+  if (window.matchMedia('(max-width: 1439px)').matches) return 8;
+  return 12;
 }
 
 function compactAddress(address) {
@@ -35,6 +37,16 @@ function projectDescription(project) {
 
 function projectDimensions(project) {
   return Array.isArray(project.sizes) ? project.sizes.join(', ') : project.sizes;
+}
+
+function compactProjectSize(project) {
+  const sizes = Array.isArray(project.sizes) ? project.sizes : [project.sizes].filter(Boolean);
+  const length = sizes.find((size) => /^Длина/i.test(size));
+  return (length || sizes[0] || '').replace(/^Длина\s*/i, '').replace(/^Высота\s*/i, '');
+}
+
+function catalogPrice(project) {
+  return `от ${project.price}`;
 }
 
 function visibleProjects() {
@@ -69,25 +81,18 @@ function renderGrid() {
     const image = project.photos?.[0] || '';
 
     return `
-      <article class="project-card card">
-        <button class="project-card__image" type="button" data-project-detail="${globalIndex}" aria-label="Смотреть проект: ${project.title}">
+      <button class="project-card card" type="button" data-project-detail="${globalIndex}" aria-label="Смотреть проект: ${project.title}">
+        <span class="project-card__image">
           <img src="${assetPath(image)}" alt="${project.title}">
-        </button>
-        <div class="project-card__body">
-          <h2>${project.title}</h2>
-          <p>${projectDescription(project)}</p>
-          <div class="project-card__price">${project.price}</div>
-          <dl class="project-card__meta">
-            <div><dt>Адрес</dt><dd>${compactAddress(project.address)}</dd></div>
-            <div><dt>Размеры</dt><dd>${projectDimensions(project)}</dd></div>
-            <div><dt>Материалы</dt><dd>${project.materials}</dd></div>
-          </dl>
-          <div class="project-card__actions">
-            <button class="project-card__more" type="button" data-project-detail="${globalIndex}">Смотреть проект</button>
-            <a class="project-card__consult" href="${project.ctaUrl || consultationUrl}" target="_blank" rel="noopener">Записаться</a>
-          </div>
-        </div>
-      </article>
+        </span>
+        <span class="project-card__body">
+          <span class="project-card__title">${project.title}</span>
+          <span class="project-card__line">
+            <span>${compactProjectSize(project)}</span>
+            <strong>${catalogPrice(project)}</strong>
+          </span>
+        </span>
+      </button>
     `;
   }).join('');
 }
@@ -107,14 +112,14 @@ function renderPagination() {
 
   const numbers = pageNumbers();
   const buttons = numbers.map((page, index) => {
-    const gap = index > 0 && page - numbers[index - 1] > 1 ? '<span class="pagination-gap">…</span>' : '';
+    const gap = index > 0 && page - numbers[index - 1] > 1 ? '<span class="pagination-gap">...</span>' : '';
     return `${gap}<button class="pagination-page${page === catalogState.page ? ' is-active' : ''}" type="button" data-page="${page}">${page}</button>`;
   }).join('');
+  const nextPage = Math.min(catalogState.page + 1, pages);
 
   catalogNodes.pagination.innerHTML = `
-    <button class="pagination-step" type="button" data-page="${catalogState.page - 1}" ${catalogState.page === 1 ? 'disabled' : ''}>Назад</button>
     ${buttons}
-    <button class="pagination-step" type="button" data-page="${catalogState.page + 1}" ${catalogState.page === pages ? 'disabled' : ''}>Вперёд</button>
+    <button class="pagination-next" type="button" data-page="${nextPage}" ${catalogState.page === pages ? 'disabled' : ''} aria-label="Следующая страница">→</button>
   `;
 }
 
@@ -163,6 +168,13 @@ catalogNodes.grid?.addEventListener('click', (event) => {
 catalogNodes.pagination?.addEventListener('click', (event) => {
   const trigger = event.target.closest('[data-page]');
   if (trigger) setPage(Number(trigger.dataset.page));
+});
+
+catalogNodes.filters?.addEventListener('click', (event) => {
+  const trigger = event.target.closest('[data-filter]');
+  if (!trigger) return;
+  catalogNodes.filters.querySelectorAll('.catalog-filter').forEach((button) => button.classList.remove('is-active'));
+  trigger.classList.add('is-active');
 });
 
 catalogNodes.modal?.addEventListener('click', (event) => {
