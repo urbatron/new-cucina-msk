@@ -23,7 +23,8 @@
       "assets/img/projects/project-001/3.jpg",
       "assets/img/projects/project-001/4.jpg",
       "assets/img/projects/project-001/5.jpg"
-    ]
+    ],
+    "cardTitle": "Шкаф для спальни"
   },
   {
     "slug": "project-002",
@@ -48,7 +49,8 @@
       "assets/img/projects/project-002/3.jpg",
       "assets/img/projects/project-002/4.jpg",
       "assets/img/projects/project-002/5.jpg"
-    ]
+    ],
+    "cardTitle": "Кухня 6 метров"
   },
   {
     "slug": "project-test-003",
@@ -69,12 +71,13 @@
     "ctaText": "Записаться на консультацию",
     "ctaUrl": "https://n1251174.yclients.com",
     "photos": [
-      "assets/img/projects/project-001/1.jpg",
       "assets/img/projects/project-001/2.jpg",
       "assets/img/projects/project-001/3.jpg",
       "assets/img/projects/project-001/4.jpg",
-      "assets/img/projects/project-001/5.jpg"
+      "assets/img/projects/project-001/5.jpg",
+      "assets/img/projects/project-001/1.jpg"
     ],
+    "cardTitle": "Шкаф для спальни",
     "testDuplicate": true
   },
   {
@@ -95,12 +98,13 @@
     "ctaText": "Записаться на консультацию",
     "ctaUrl": "https://n1251174.yclients.com",
     "photos": [
-      "assets/img/projects/project-002/1.jpg",
       "assets/img/projects/project-002/2.jpg",
       "assets/img/projects/project-002/3.jpg",
       "assets/img/projects/project-002/4.jpg",
-      "assets/img/projects/project-002/5.jpg"
+      "assets/img/projects/project-002/5.jpg",
+      "assets/img/projects/project-002/1.jpg"
     ],
+    "cardTitle": "Кухня 6 метров",
     "testDuplicate": true
   },
   {
@@ -122,12 +126,13 @@
     "ctaText": "Записаться на консультацию",
     "ctaUrl": "https://n1251174.yclients.com",
     "photos": [
-      "assets/img/projects/project-001/1.jpg",
-      "assets/img/projects/project-001/2.jpg",
       "assets/img/projects/project-001/3.jpg",
       "assets/img/projects/project-001/4.jpg",
-      "assets/img/projects/project-001/5.jpg"
+      "assets/img/projects/project-001/5.jpg",
+      "assets/img/projects/project-001/1.jpg",
+      "assets/img/projects/project-001/2.jpg"
     ],
+    "cardTitle": "Шкаф для спальни",
     "testDuplicate": true
   },
   {
@@ -148,12 +153,13 @@
     "ctaText": "Записаться на консультацию",
     "ctaUrl": "https://n1251174.yclients.com",
     "photos": [
-      "assets/img/projects/project-002/1.jpg",
-      "assets/img/projects/project-002/2.jpg",
       "assets/img/projects/project-002/3.jpg",
       "assets/img/projects/project-002/4.jpg",
-      "assets/img/projects/project-002/5.jpg"
+      "assets/img/projects/project-002/5.jpg",
+      "assets/img/projects/project-002/1.jpg",
+      "assets/img/projects/project-002/2.jpg"
     ],
+    "cardTitle": "Кухня 6 метров",
     "testDuplicate": true
   },
   {
@@ -175,12 +181,13 @@
     "ctaText": "Записаться на консультацию",
     "ctaUrl": "https://n1251174.yclients.com",
     "photos": [
+      "assets/img/projects/project-001/4.jpg",
+      "assets/img/projects/project-001/5.jpg",
       "assets/img/projects/project-001/1.jpg",
       "assets/img/projects/project-001/2.jpg",
-      "assets/img/projects/project-001/3.jpg",
-      "assets/img/projects/project-001/4.jpg",
-      "assets/img/projects/project-001/5.jpg"
+      "assets/img/projects/project-001/3.jpg"
     ],
+    "cardTitle": "Шкаф для спальни",
     "testDuplicate": true
   },
   {
@@ -201,12 +208,13 @@
     "ctaText": "Записаться на консультацию",
     "ctaUrl": "https://n1251174.yclients.com",
     "photos": [
+      "assets/img/projects/project-002/4.jpg",
+      "assets/img/projects/project-002/5.jpg",
       "assets/img/projects/project-002/1.jpg",
       "assets/img/projects/project-002/2.jpg",
-      "assets/img/projects/project-002/3.jpg",
-      "assets/img/projects/project-002/4.jpg",
-      "assets/img/projects/project-002/5.jpg"
+      "assets/img/projects/project-002/3.jpg"
     ],
+    "cardTitle": "Кухня 6 метров",
     "testDuplicate": true
   },
   {
@@ -228,12 +236,13 @@
     "ctaText": "Записаться на консультацию",
     "ctaUrl": "https://n1251174.yclients.com",
     "photos": [
+      "assets/img/projects/project-001/5.jpg",
       "assets/img/projects/project-001/1.jpg",
       "assets/img/projects/project-001/2.jpg",
       "assets/img/projects/project-001/3.jpg",
-      "assets/img/projects/project-001/4.jpg",
-      "assets/img/projects/project-001/5.jpg"
+      "assets/img/projects/project-001/4.jpg"
     ],
+    "cardTitle": "Шкаф для спальни",
     "testDuplicate": true
   },
   {
@@ -254,12 +263,13 @@
     "ctaText": "Записаться на консультацию",
     "ctaUrl": "https://n1251174.yclients.com",
     "photos": [
+      "assets/img/projects/project-002/5.jpg",
       "assets/img/projects/project-002/1.jpg",
       "assets/img/projects/project-002/2.jpg",
       "assets/img/projects/project-002/3.jpg",
-      "assets/img/projects/project-002/4.jpg",
-      "assets/img/projects/project-002/5.jpg"
+      "assets/img/projects/project-002/4.jpg"
     ],
+    "cardTitle": "Кухня 6 метров",
     "testDuplicate": true
   },
   {
@@ -287,6 +297,7 @@
       "assets/img/projects/project-001/4.jpg",
       "assets/img/projects/project-001/5.jpg"
     ],
+    "cardTitle": "Шкаф для спальни",
     "testDuplicate": true
   },
   {
@@ -313,6 +324,7 @@
       "assets/img/projects/project-002/4.jpg",
       "assets/img/projects/project-002/5.jpg"
     ],
+    "cardTitle": "Кухня 6 метров",
     "testDuplicate": true
   },
   {
@@ -334,12 +346,13 @@
     "ctaText": "Записаться на консультацию",
     "ctaUrl": "https://n1251174.yclients.com",
     "photos": [
-      "assets/img/projects/project-001/1.jpg",
       "assets/img/projects/project-001/2.jpg",
       "assets/img/projects/project-001/3.jpg",
       "assets/img/projects/project-001/4.jpg",
-      "assets/img/projects/project-001/5.jpg"
+      "assets/img/projects/project-001/5.jpg",
+      "assets/img/projects/project-001/1.jpg"
     ],
+    "cardTitle": "Шкаф для спальни",
     "testDuplicate": true
   },
   {
@@ -360,12 +373,13 @@
     "ctaText": "Записаться на консультацию",
     "ctaUrl": "https://n1251174.yclients.com",
     "photos": [
-      "assets/img/projects/project-002/1.jpg",
       "assets/img/projects/project-002/2.jpg",
       "assets/img/projects/project-002/3.jpg",
       "assets/img/projects/project-002/4.jpg",
-      "assets/img/projects/project-002/5.jpg"
+      "assets/img/projects/project-002/5.jpg",
+      "assets/img/projects/project-002/1.jpg"
     ],
+    "cardTitle": "Кухня 6 метров",
     "testDuplicate": true
   },
   {
@@ -387,12 +401,13 @@
     "ctaText": "Записаться на консультацию",
     "ctaUrl": "https://n1251174.yclients.com",
     "photos": [
-      "assets/img/projects/project-001/1.jpg",
-      "assets/img/projects/project-001/2.jpg",
       "assets/img/projects/project-001/3.jpg",
       "assets/img/projects/project-001/4.jpg",
-      "assets/img/projects/project-001/5.jpg"
+      "assets/img/projects/project-001/5.jpg",
+      "assets/img/projects/project-001/1.jpg",
+      "assets/img/projects/project-001/2.jpg"
     ],
+    "cardTitle": "Шкаф для спальни",
     "testDuplicate": true
   }
 ]

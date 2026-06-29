@@ -55,7 +55,12 @@
   <div class="project-modal__backdrop" data-modal-close></div>
   <article class="project-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
     <button class="project-modal__close" type="button" data-modal-close aria-label="Закрыть">×</button>
-    <img class="project-modal__image" data-modal-image src="" alt="">
+    <div class="project-modal__gallery">
+      <button class="project-modal__arrow project-modal__arrow--prev" type="button" data-modal-prev aria-label="Предыдущее фото">←</button>
+      <img class="project-modal__image" data-modal-image src="" alt="">
+      <button class="project-modal__arrow project-modal__arrow--next" type="button" data-modal-next aria-label="Следующее фото">→</button>
+      <div class="project-modal__thumbs" data-modal-thumbs aria-label="Фотографии проекта"></div>
+    </div>
     <div class="project-modal__content">
       <p class="project-modal__eyebrow">Проект CUCINA</p>
       <h2 id="project-modal-title" data-modal-title></h2>

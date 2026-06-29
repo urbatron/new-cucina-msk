@@ -2,6 +2,8 @@ const catalogState = {
   projects: [],
   page: 1,
   pageSize: 12,
+  activeProjectIndex: 0,
+  activePhotoIndex: 0,
 };
 
 const catalogNodes = {
@@ -10,6 +12,9 @@ const catalogNodes = {
   filters: document.querySelector('.catalog-filters'),
   modal: document.querySelector('[data-project-modal]'),
   modalImage: document.querySelector('[data-modal-image]'),
+  modalThumbs: document.querySelector('[data-modal-thumbs]'),
+  modalPrev: document.querySelector('[data-modal-prev]'),
+  modalNext: document.querySelector('[data-modal-next]'),
   modalTitle: document.querySelector('[data-modal-title]'),
   modalDescription: document.querySelector('[data-modal-description]'),
   modalFacts: document.querySelector('[data-modal-facts]'),
@@ -74,7 +79,7 @@ function renderGrid() {
           <img src="${assetPath(image)}" alt="${project.title}">
         </span>
         <span class="project-card__body">
-          <span class="project-card__title">${project.title}</span>
+          <span class="project-card__title">${project.cardTitle || project.title}</span>
           <span class="project-card__line">
             <span>${compactProjectSize(project)}</span>
             <strong>${catalogPrice(project)}</strong>
@@ -126,12 +131,36 @@ function modalFacts(project) {
   ];
 }
 
+function renderModalPhoto() {
+  const project = catalogState.projects[catalogState.activeProjectIndex];
+  if (!project) return;
+
+  const photos = project.photos || [];
+  const currentPhoto = photos[catalogState.activePhotoIndex] || photos[0] || '';
+  catalogNodes.modalImage.src = assetPath(currentPhoto);
+  catalogNodes.modalImage.alt = project.title;
+  catalogNodes.modalThumbs.innerHTML = photos.map((photo, index) => `
+    <button class="project-modal__thumb${index === catalogState.activePhotoIndex ? ' is-active' : ''}" type="button" data-modal-photo="${index}" aria-label="Фото ${index + 1}">
+      <img src="${assetPath(photo)}" alt="">
+    </button>
+  `).join('');
+}
+
+function setModalPhoto(index) {
+  const project = catalogState.projects[catalogState.activeProjectIndex];
+  if (!project?.photos?.length) return;
+
+  catalogState.activePhotoIndex = (index + project.photos.length) % project.photos.length;
+  renderModalPhoto();
+}
+
 function openProjectDetail(index) {
   const project = catalogState.projects[index];
   if (!project) return;
 
-  catalogNodes.modalImage.src = assetPath(project.photos?.[0] || '');
-  catalogNodes.modalImage.alt = project.title;
+  catalogState.activeProjectIndex = index;
+  catalogState.activePhotoIndex = 0;
+  renderModalPhoto();
   catalogNodes.modalTitle.textContent = project.title;
   catalogNodes.modalDescription.textContent = project.note || projectDescription(project);
   catalogNodes.modalFacts.innerHTML = modalFacts(project).map(([label, value]) => `<div><dt>${label}</dt><dd>${value}</dd></div>`).join('');
@@ -166,6 +195,13 @@ catalogNodes.filters?.addEventListener('click', (event) => {
 
 catalogNodes.modal?.addEventListener('click', (event) => {
   if (event.target.closest('[data-modal-close]')) closeProjectDetail();
+});
+
+catalogNodes.modalPrev?.addEventListener('click', () => setModalPhoto(catalogState.activePhotoIndex - 1));
+catalogNodes.modalNext?.addEventListener('click', () => setModalPhoto(catalogState.activePhotoIndex + 1));
+catalogNodes.modalThumbs?.addEventListener('click', (event) => {
+  const trigger = event.target.closest('[data-modal-photo]');
+  if (trigger) setModalPhoto(Number(trigger.dataset.modalPhoto));
 });
 
 document.addEventListener('keydown', (event) => {
