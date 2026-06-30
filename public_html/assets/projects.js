@@ -1,7 +1,7 @@
 const catalogState = {
   projects: [],
   page: 1,
-  pageSize: 12,
+  pageSize: 6,
   activeProjectIndex: 0,
   activePhotoIndex: 0,
   activeFilter: 'all',
