@@ -90,12 +90,13 @@ function renderGrid() {
     return;
   }
 
-  catalogNodes.grid.innerHTML = projects.map((project) => {
+  catalogNodes.grid.innerHTML = projects.map((project, index) => {
     const globalIndex = catalogState.projects.indexOf(project);
+    const cardClass = `project-card card${index === 4 ? ' project-card--wide' : ''}`;
     const image = project.photos?.[0] || '';
 
     return `
-      <button class="project-card card" type="button" data-project-detail="${globalIndex}" aria-label="Смотреть проект: ${project.title}">
+      <button class="${cardClass}" type="button" data-project-detail="${globalIndex}" aria-label="Смотреть проект: ${project.title}">
         <img class="project-card__image" src="${assetPath(image)}" alt="${project.title}">
         <span class="project-card__shade" aria-hidden="true"></span>
         <span class="project-card__badge">${project.category || (project.cardTitle?.includes('Шкаф') ? 'Шкафы' : 'Кухня')}</span>
