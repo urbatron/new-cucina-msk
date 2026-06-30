@@ -99,9 +99,8 @@ function renderGrid() {
       <button class="${cardClass}" type="button" data-project-detail="${globalIndex}" aria-label="Смотреть проект: ${project.title}">
         <img class="project-card__image" src="${assetPath(image)}" alt="${project.title}">
         <span class="project-card__shade" aria-hidden="true"></span>
-        <span class="project-card__badge">${project.category || (project.cardTitle?.includes('Шкаф') ? 'Шкафы' : 'Кухня')}</span>
+        <span class="project-card__badge">${project.category === 'Шкафы' ? 'Шкаф' : (project.category || (project.cardTitle?.includes('Шкаф') ? 'Шкаф' : 'Кухня'))}</span>
         <span class="project-card__body">
-          <span class="project-card__title">${project.cardTitle || project.title}</span>
           <span class="project-card__line">
             <span>${compactProjectSize(project)}</span>
             <strong>${catalogPrice(project)}</strong>
