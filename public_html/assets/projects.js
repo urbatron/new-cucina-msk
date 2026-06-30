@@ -4,6 +4,7 @@ const catalogState = {
   pageSize: 12,
   activeProjectIndex: 0,
   activePhotoIndex: 0,
+  activeFilter: 'all',
 };
 
 const catalogNodes = {
@@ -25,10 +26,7 @@ const consultationUrl = 'https://n1251174.yclients.com';
 const assetPath = (path) => `../${path}`;
 
 function getPageSize() {
-  if (window.matchMedia('(max-width: 640px)').matches) return 6;
-  if (window.matchMedia('(max-width: 1024px)').matches) return 6;
-  if (window.matchMedia('(max-width: 1439px)').matches) return 8;
-  return 12;
+  return 6;
 }
 
 function compactAddress(address) {
@@ -53,13 +51,30 @@ function catalogPrice(project) {
   return `от ${project.price}`;
 }
 
+
+function projectPriceValue(project) {
+  return Number(String(project.price).replace(/\D/g, '')) || 0;
+}
+
+function filteredProjects() {
+  return catalogState.projects.filter((project) => {
+    if (catalogState.activeFilter === 'all') return true;
+    if (catalogState.activeFilter === 'kitchens') return project.category === 'Кухня';
+    if (catalogState.activeFilter === 'living') return project.category === 'Гостиная';
+    if (catalogState.activeFilter === 'wardrobes') return project.category === 'Шкафы';
+    if (catalogState.activeFilter === 'under-500') return projectPriceValue(project) < 500000;
+    if (catalogState.activeFilter === 'from-500') return projectPriceValue(project) >= 500000;
+    return true;
+  });
+}
+
 function visibleProjects() {
   const start = (catalogState.page - 1) * catalogState.pageSize;
-  return catalogState.projects.slice(start, start + catalogState.pageSize);
+  return filteredProjects().slice(start, start + catalogState.pageSize);
 }
 
 function totalPages() {
-  return Math.max(1, Math.ceil(catalogState.projects.length / catalogState.pageSize));
+  return Math.max(1, Math.ceil(filteredProjects().length / catalogState.pageSize));
 }
 
 function setPage(page) {
@@ -69,8 +84,14 @@ function setPage(page) {
 
 
 function renderGrid() {
-  catalogNodes.grid.innerHTML = visibleProjects().map((project, index) => {
-    const globalIndex = (catalogState.page - 1) * catalogState.pageSize + index;
+  const projects = visibleProjects();
+  if (!projects.length) {
+    catalogNodes.grid.innerHTML = '<p class="catalog-error">Проекты не найдены</p>';
+    return;
+  }
+
+  catalogNodes.grid.innerHTML = projects.map((project) => {
+    const globalIndex = catalogState.projects.indexOf(project);
     const image = project.photos?.[0] || '';
 
     return `
@@ -99,7 +120,7 @@ function pageNumbers() {
 
 function renderPagination() {
   const pages = totalPages();
-  if (catalogState.projects.length <= catalogState.pageSize) {
+  if (filteredProjects().length <= catalogState.pageSize) {
     catalogNodes.pagination.innerHTML = '';
     return;
   }
@@ -192,6 +213,9 @@ catalogNodes.filters?.addEventListener('click', (event) => {
   if (!trigger) return;
   catalogNodes.filters.querySelectorAll('.catalog-filter').forEach((button) => button.classList.remove('is-active'));
   trigger.classList.add('is-active');
+  catalogState.activeFilter = trigger.dataset.filter;
+  catalogState.page = 1;
+  renderCatalog();
 });
 
 catalogNodes.modal?.addEventListener('click', (event) => {

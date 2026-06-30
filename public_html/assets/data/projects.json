@@ -136,9 +136,9 @@
       "assets/img/projects/project-001/1.jpg",
       "assets/img/projects/project-001/2.jpg"
     ],
-    "cardTitle": "Шкаф для спальни",
+    "cardTitle": "Гостиная",
     "testDuplicate": true,
-    "category": "Шкафы"
+    "category": "Гостиная"
   },
   {
     "slug": "project-test-006",
@@ -307,9 +307,9 @@
       "assets/img/projects/project-001/4.jpg",
       "assets/img/projects/project-001/5.jpg"
     ],
-    "cardTitle": "Шкаф для спальни",
+    "cardTitle": "Гостиная",
     "testDuplicate": true,
-    "category": "Шкафы"
+    "category": "Гостиная"
   },
   {
     "slug": "project-test-012",
