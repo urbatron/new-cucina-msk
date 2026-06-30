@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Примеры проектов с ценами — CUCINA</title>
+  <meta name="description" content="Реальные проекты CUCINA с фото, материалами, размерами, стоимостью и выгодой клиента.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="projects-page">
+<div class="page-shell projects-shell">
+  <header class="site-header header">
+    <a class="back-link" href="../" aria-label="Вернуться на главную">
+      <span aria-hidden="true">←</span>
+      Главная
+    </a>
+    <a class="logo" href="../" aria-label="CUCINA"><img src="../assets/img/logo.png" alt="CUCINA"></a>
+    <div class="phone-wrap">
+      <button class="icon-btn phone-toggle" data-phone-toggle aria-label="Показать телефон">
+        <svg class="icon icon--stroke icon--white" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4.8 5.8c0 7.4 6 13.4 13.4 13.4h1.4a1.7 1.7 0 0 0 1.7-1.5l.4-3.2a1.7 1.7 0 0 0-1-1.8l-3-1.3a1.7 1.7 0 0 0-1.9.5l-1.2 1.5a13 13 0 0 1-4-4l1.5-1.2a1.7 1.7 0 0 0 .5-1.9L11.3 3.3a1.7 1.7 0 0 0-1.8-1l-3.2.4A1.7 1.7 0 0 0 4.8 4.4v1.4Z"/>
+        </svg>
+      </button>
+      <a class="phone-badge" data-phone-badge href="tel:+74952152015" aria-label="Позвонить в CUCINA">+7 (495) 215-20-15</a>
+    </div>
+  </header>
+
+  <main class="projects-catalog reveal" aria-label="Каталог проектов с ценами">
+    <section class="catalog-head">
+      <h1>Реализованные проекты</h1>
+    </section>
+
+    <section class="catalog-toolbar" aria-label="Фильтры и запись">
+      <div class="catalog-filters" aria-label="Фильтры проектов">
+        <button class="catalog-filter is-active" type="button" data-filter="all">Все</button>
+        <button class="catalog-filter" type="button" data-filter="kitchens">Кухни</button>
+        <button class="catalog-filter" type="button" data-filter="living">Гостиные</button>
+        <button class="catalog-filter" type="button" data-filter="wardrobes">Шкафы</button>
+        <button class="catalog-filter" type="button" data-filter="under-500">До 500 тыс.</button>
+        <button class="catalog-filter" type="button" data-filter="from-500">От 500 тыс.</button>
+      </div>
+      <a class="catalog-meeting" href="https://n1251174.yclients.com" target="_blank" rel="noopener">Записаться на встречу</a>
+    </section>
+
+    <section class="projects-grid" data-project-grid aria-live="polite"></section>
+
+    <nav class="catalog-pagination" data-project-pagination aria-label="Пагинация проектов"></nav>
+  </main>
+</div>
+
+<div class="project-modal" data-project-modal aria-hidden="true">
+  <div class="project-modal__backdrop" data-modal-close></div>
+  <article class="project-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+    <button class="project-modal__close" type="button" data-modal-close aria-label="Закрыть">×</button>
+    <div class="project-modal__gallery">
+      <button class="project-modal__arrow project-modal__arrow--prev" type="button" data-modal-prev aria-label="Предыдущее фото">←</button>
+      <img class="project-modal__image" data-modal-image src="" alt="">
+      <button class="project-modal__arrow project-modal__arrow--next" type="button" data-modal-next aria-label="Следующее фото">→</button>
+      <div class="project-modal__thumbs" data-modal-thumbs aria-label="Фотографии проекта"></div>
+    </div>
+    <div class="project-modal__content">
+      <p class="project-modal__eyebrow">Проект CUCINA</p>
+      <h2 id="project-modal-title" data-modal-title></h2>
+      <p data-modal-description></p>
+      <dl data-modal-facts></dl>
+      <a class="project-modal__cta" data-modal-cta target="_blank" rel="noopener">Записаться на консультацию</a>
+    </div>
+  </article>
+</div>
+
+<script src="../assets/app.js"></script>
+<script src="../assets/projects.js"></script>
+</body>
+</html>
