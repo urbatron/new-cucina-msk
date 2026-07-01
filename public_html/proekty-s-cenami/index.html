@@ -33,8 +33,9 @@
       <h1>Реализованные проекты</h1>
     </section>
 
+    <!-- Фильтры временно скрыты визуально: логика и разметка оставлены для будущего включения. -->
     <section class="catalog-toolbar" aria-label="Фильтры и запись">
-      <div class="catalog-filters" aria-label="Фильтры проектов">
+      <div class="catalog-filters is-visually-paused" aria-label="Фильтры проектов">
         <button class="catalog-filter is-active" type="button" data-filter="all">Все</button>
         <button class="catalog-filter" type="button" data-filter="kitchens">Кухни</button>
         <button class="catalog-filter" type="button" data-filter="living">Гостиные</button>
@@ -47,7 +48,8 @@
 
     <section class="projects-grid" data-project-grid aria-live="polite"></section>
 
-    <nav class="catalog-pagination" data-project-pagination aria-label="Пагинация проектов"></nav>
+    <!-- Пагинация временно скрыта визуально: JS-логика и контейнер оставлены. -->
+    <nav class="catalog-pagination is-visually-paused" data-project-pagination aria-label="Пагинация проектов"></nav>
   </main>
 </div>
 
