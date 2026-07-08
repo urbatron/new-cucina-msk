@@ -176,3 +176,55 @@
 @media (max-width:1180px){.service-hero{grid-template-columns:minmax(0,1fr) minmax(300px,.68fr)}.service-step{grid-template-columns:1fr}.service-step h2{font-size:clamp(24px,2.2vw,30px)}.service-step p{font-size:15px}.service-hero__content p{font-size:17px}}
 @media (max-width:1024px){.service-shell{width:min(860px,calc(100vw - 28px));height:auto;min-height:100dvh}.service-main{height:auto;grid-template-rows:auto auto auto;gap:14px;padding:14px 0 32px}.service-top{align-items:start}.service-flow{gap:30px}.service-hero{grid-template-columns:1fr;min-height:0}.service-hero__content{padding:28px}.service-hero__media{min-height:280px;border-left:0;border-top:1px solid rgba(255,255,255,.055)}.service-hero__chips{left:20px;right:20px;justify-content:flex-start;max-width:none}.service-stages{grid-template-columns:1fr;gap:18px}.service-step{grid-template-columns:1fr;min-height:360px}.service-summary{grid-template-columns:1fr}.service-top h1{font-size:clamp(30px,6vw,44px)}}
 @media (max-width:640px){.service-shell{width:100%;padding:8px 14px 18px}.service-hero{border-radius:18px}.service-hero__content{padding:24px}.service-hero__content p{font-size:16px;line-height:1.56}.service-hero__media{min-height:220px}.service-hero__chips span{min-height:30px;font-size:11px;padding:0 12px}.service-step{grid-template-columns:1fr;min-height:360px;border-radius:18px}.service-step__body{width:100%;padding:28px}.service-step__visual{display:none}.service-step h2{font-size:25px}.service-step p,.service-summary p{font-size:15px;line-height:1.56}.service-summary{padding:24px;border-radius:18px}.service-summary h2{font-size:26px}}
+
+/* Mobile system pass for premium one-column layouts up to tablet width. */
+@media (max-width:768px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  body{min-width:0}
+  .page-shell,.projects-shell,.showrooms-shell,.service-shell,.designers-shell{width:100%;max-width:100%;padding:8px 14px 22px;grid-template-rows:58px auto;row-gap:16px;overflow-x:hidden}
+  .site-header,.header{height:58px;grid-template-columns:minmax(58px,74px) minmax(0,1fr) 44px;column-gap:8px}
+  .site-header::after,.header::after{background:rgba(255,255,255,.075)}
+  .logo{width:clamp(132px,38vw,168px);height:58px;min-width:0}
+  .logo img{max-height:76%}
+  .back-link{height:30px;max-width:74px;padding:0 8px;gap:4px;font-size:11px;line-height:1;white-space:nowrap;overflow:hidden;text-overflow:clip}
+  .phone-wrap{justify-self:end;width:40px;display:flex;justify-content:flex-end}
+  .phone-toggle{width:36px;height:36px;min-width:36px}
+  .phone-badge{top:43px;right:0;z-index:30}
+
+  .catalog-head h1,.showrooms-top h1,.service-top h1,.designers-top h1{font-size:clamp(34px,9.2vw,40px);line-height:1.02;letter-spacing:-.07em;margin:0;overflow-wrap:break-word;text-wrap:balance}
+  .projects-catalog,.showrooms-main,.service-main,.designers-main{gap:16px;padding:4px 0 28px;overflow-x:hidden}
+  .catalog-toolbar,.page-toolbar{display:flex;align-items:center;justify-content:flex-start;gap:0;margin:0 0 2px;min-width:0}
+  .catalog-filters.is-visually-paused,.page-toolbar-spacer{display:none!important}
+  .catalog-meeting{justify-self:start;width:100%;max-width:260px;min-height:44px;height:44px;padding:0 18px;font-size:14px;border-color:rgba(240,223,185,.22);background:rgba(216,183,128,.085)}
+
+  .feature-grid,.social-column{display:flex;flex-direction:column;gap:18px;width:100%;min-width:0}
+  .feature-card,.feature-card--small,.feature-card--large,.feature-card--wide{width:100%;min-height:190px;padding:22px;border-radius:16px;background-position:center!important;transform:none!important}
+  .feature-card::after{background:linear-gradient(180deg,rgba(5,8,13,.12) 0%,rgba(5,8,13,.40) 42%,rgba(5,8,13,.78) 100%),linear-gradient(90deg,rgba(5,8,13,.58),rgba(5,8,13,.18))}
+  .feature-card-title,.feature-card--small .feature-card-title{font-size:clamp(24px,6.4vw,30px);line-height:1.05;max-width:95%;letter-spacing:-.045em}
+  .feature-card-note{font-size:16px;max-width:94%;line-height:1.35}
+  .card-link{min-height:44px;height:44px;padding:0 17px;font-size:14px;margin-top:auto}
+
+  .projects-grid{display:flex!important;flex-direction:column;width:100%;gap:18px;grid-template-columns:none!important;grid-template-rows:none!important;grid-template-areas:none!important;grid-auto-rows:auto!important;overflow:visible}
+  .project-card,.project-card:nth-child(n),.project-card--wide{width:100%;min-height:390px;height:auto;grid-area:auto!important;grid-column:auto!important;grid-row:auto!important;border-radius:16px;overflow:hidden}
+  .project-card__shade,.project-card--wide .project-card__shade{background:linear-gradient(180deg,rgba(4,7,11,.04) 0%,rgba(4,7,11,.20) 38%,rgba(4,7,11,.84) 100%),linear-gradient(90deg,rgba(4,7,11,.62),rgba(4,7,11,.18))}
+  .project-card__body,.project-card--wide .project-card__body{display:grid;grid-template-columns:1fr;gap:12px;width:100%;padding:24px;align-self:end;grid-template-areas:none}
+  .project-card__badge,.project-card--wide .project-card__badge{top:18px;left:18px;max-width:calc(100% - 36px);min-height:28px;font-size:12px}
+  .project-card__line,.project-card--wide .project-card__line{grid-area:auto;display:flex;flex-wrap:wrap;gap:8px 12px;font-size:14px;line-height:1.35;color:rgba(255,255,255,.78)}
+  .project-card__line strong,.project-card--wide .project-card__line strong{font-size:16px;white-space:normal}
+  .project-card__action,.project-card--wide .project-card__action{grid-area:auto;width:100%;justify-content:center;min-height:44px;margin:2px 0 0;font-size:14px;white-space:nowrap}
+
+  .showrooms-grid{display:flex;flex-direction:column;gap:18px;width:100%;height:auto;overflow:visible}
+  .showroom-card{width:100%;min-height:450px;height:auto;padding:24px;border-radius:18px;align-items:flex-end}
+  .showroom-card::after{background:linear-gradient(180deg,rgba(5,8,13,.10) 0%,rgba(5,8,13,.38) 42%,rgba(5,8,13,.86) 100%),linear-gradient(90deg,rgba(5,8,13,.62),rgba(5,8,13,.18))}
+  .showroom-card h2{font-size:clamp(34px,9vw,40px);line-height:.98}
+  .showroom-card__address{font-size:15px;line-height:1.45;overflow-wrap:break-word}
+  .showroom-card__phone{font-size:16px}.showroom-card__cta{width:100%;min-height:44px;font-size:14px}
+
+  .service-flow{gap:22px}.service-hero{min-height:auto;border-radius:18px;background-image:linear-gradient(180deg,rgba(5,8,13,.60),rgba(5,8,13,.88)),url("img/bg/svoia-service.png");background-position:center}.service-hero__content{padding:24px}.service-stages{display:flex;flex-direction:column;gap:18px}.service-step{width:100%;min-height:0;height:auto;overflow:visible;border-radius:18px;align-items:flex-end}.service-card::after{background:linear-gradient(180deg,rgba(5,8,13,.44),rgba(5,8,13,.88)),linear-gradient(90deg,rgba(6,10,16,.74),rgba(6,10,16,.20))}.service-step__body{padding:24px;gap:16px}.service-step h2{font-size:clamp(24px,6.8vw,29px);line-height:1.12}.service-step p{font-size:15.5px;line-height:1.58}.service-summary{grid-template-columns:1fr;min-height:auto;padding:24px;gap:16px;overflow:visible}.service-summary h2{font-size:30px}.service-summary p:last-child{font-size:18px}
+
+  .designers-bento{display:flex!important;flex-direction:column;width:100%;height:auto;gap:18px;grid-template-columns:none!important;grid-template-areas:none!important;overflow:visible}.designer-card{width:100%;min-width:0;border-radius:18px;overflow:hidden}.designer-card--hero{min-height:360px;padding:24px;grid-area:auto!important}.designer-card--hero h2{font-size:clamp(34px,9vw,40px);line-height:1.02}.designer-card--benefit{min-height:210px;padding:24px;grid-area:auto!important}.designer-card--benefit h2{font-size:clamp(24px,6.5vw,30px);line-height:1.08}.designer-card p{font-size:15.5px;line-height:1.48}.designer-card--client{display:grid;grid-template-columns:1fr;gap:14px;padding:22px;grid-area:auto!important}.designer-chips{gap:9px}.designer-chips span{white-space:normal;min-height:32px;font-size:12.5px}.designer-card__cta,.designer-card__link{min-height:44px;font-size:14px}
+}
+
+@media (min-width:641px) and (max-width:768px){
+  .project-card,.project-card:nth-child(n){min-height:430px}.showroom-card{min-height:480px}.designer-card--hero{min-height:410px}.designer-card--benefit{min-height:230px}.feature-card{min-height:210px}
+}
