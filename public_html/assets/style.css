@@ -328,3 +328,15 @@
   body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-link{min-height:44px;height:44px;margin-bottom:4px;gap:10px}
   body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max .card-link{margin-top:24px;margin-bottom:4px}
 }
+
+/* Home mobile edge cleanup: prevent light bleed along rounded card edges. */
+@media (max-width:768px){
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card{background-color:#0b111b;overflow:hidden;isolation:isolate;background-clip:padding-box}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card::after{inset:-1px;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,255,255,.045),inset 0 0 28px rgba(0,0,0,.24)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-vk::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-video::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-wesen::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-meeting::after{box-shadow:inset 0 0 0 1px rgba(255,255,255,.04),inset 0 0 32px rgba(0,0,0,.26)}
+}
