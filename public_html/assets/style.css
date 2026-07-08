@@ -286,3 +286,15 @@
   body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-link{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;min-width:0;max-width:100%;min-height:44px;height:44px;margin-top:auto;padding:0 18px;gap:10px;font-size:14px;line-height:1;white-space:nowrap;overflow:visible!important}
   body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .link-arrow{flex:0 0 14px;width:14px;height:14px}
 }
+
+/* Final home mobile visual polish: agreed backgrounds, Dzen presence, calm MAX rhythm. */
+@media (max-width:768px){
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-meeting{background-image:linear-gradient(180deg,rgba(8,12,18,.18) 0%,rgba(8,12,18,.26) 46%,rgba(8,12,18,.72) 100%),linear-gradient(90deg,rgba(8,12,18,.62) 0%,rgba(8,12,18,.34) 58%,rgba(8,12,18,.10) 100%),url("img/bg/disiner.png"),url("img/bg/diziner.png")!important;background-position:center,center,62% center,62% center!important;background-size:cover!important;background-repeat:no-repeat!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-wesen{background-image:linear-gradient(180deg,rgba(8,12,18,.16) 0%,rgba(8,12,18,.28) 48%,rgba(8,12,18,.70) 100%),linear-gradient(90deg,rgba(8,12,18,.62) 0%,rgba(8,12,18,.30) 56%,rgba(8,12,18,.10) 100%),url("img/bg/more.png"),url("img/bg/akcii.png")!important;background-position:center,center,68% center,72% center!important;background-size:cover!important;background-repeat:no-repeat!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen{background-image:radial-gradient(circle at 82% 24%,rgba(240,223,185,.16),transparent 34%),linear-gradient(135deg,rgba(8,12,18,.38),rgba(8,12,18,.18)),url("img/bg/dzen.png")!important;background-position:center,center,70% center!important;background-size:cover!important;background-repeat:no-repeat!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen::after{background:linear-gradient(180deg,rgba(5,8,13,.08) 0%,rgba(5,8,13,.24) 42%,rgba(5,8,13,.62) 100%),linear-gradient(90deg,rgba(5,8,13,.48),rgba(5,8,13,.10))}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen .brand-icon--dzen{width:34px;height:34px;margin-bottom:18px;opacity:.96;filter:drop-shadow(0 10px 20px rgba(0,0,0,.34))}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen .card-link{margin-top:auto;background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.14)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max{padding-bottom:32px!important;background-position:64% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max .card-link{margin-top:26px}
+}
