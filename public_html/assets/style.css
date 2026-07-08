@@ -254,3 +254,35 @@
   body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card-note{display:block;max-width:min(92%,460px);font-size:16px;line-height:1.38;white-space:normal;overflow:visible;color:rgba(255,252,247,.86)}
   body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-link{display:inline-flex;flex:0 0 auto;align-self:flex-start;min-width:0;max-width:100%;min-height:44px;height:44px;margin-top:auto;padding:0 18px;gap:10px;font-size:14px;white-space:nowrap;overflow:visible}
 }
+
+/* Home mobile hardening: no cropped cards, no desktop bento remnants. */
+@media (max-width:768px){
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page){overflow-x:hidden}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .page-shell{width:100%;max-width:100%;height:auto;min-height:100dvh;padding:8px clamp(18px,4.8vw,20px) 26px;display:grid;grid-template-rows:58px auto;row-gap:20px}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .main-grid{display:block;width:100%;height:auto!important;min-height:0;overflow:visible;isolation:isolate}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-grid{display:flex!important;flex-direction:column!important;width:100%;height:auto!important;min-height:0;gap:22px;grid-template-columns:none!important;grid-template-rows:none!important;grid-template-areas:none!important;overflow:visible}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .social-column{display:flex!important;flex-direction:column!important;order:4;width:100%;height:auto!important;min-height:0;gap:22px;grid-row:auto!important;grid-column:auto!important;grid-area:auto!important;overflow:visible}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card--large,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card--small,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card--wide{position:relative;display:flex!important;flex:0 0 auto!important;flex-direction:column;align-items:flex-start;justify-content:flex-start;width:100%!important;max-width:100%;min-width:0;height:auto!important;min-height:220px!important;padding:26px 24px!important;margin:0!important;border-radius:18px;grid-column:auto!important;grid-row:auto!important;grid-area:auto!important;transform:none!important;translate:none!important;background-size:cover!important;overflow:hidden}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card>*{position:relative;z-index:1;transform:none!important;translate:none!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-projects{order:1;min-height:260px!important;background-position:58% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-meeting{order:2;min-height:255px!important;background-position:58% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max{order:3;min-height:240px!important;padding-top:28px!important;background-position:62% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-vk{order:1;min-height:205px!important;background-position:74% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen{order:2;display:flex!important;min-height:205px!important;background-position:72% center!important;visibility:visible!important;opacity:1!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-showroom{order:5;min-height:235px!important;background-position:58% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-service{order:6;min-height:280px!important;padding-bottom:26px!important;background-position:60% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-video{order:7;min-height:225px!important;background-position:62% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-designers{order:8;min-height:235px!important;background-position:56% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-wesen{order:9;min-height:235px!important;background-position:64% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card::after{background:linear-gradient(180deg,rgba(5,8,13,.10) 0%,rgba(5,8,13,.30) 38%,rgba(5,8,13,.78) 100%),linear-gradient(90deg,rgba(5,8,13,.68) 0%,rgba(5,8,13,.36) 52%,rgba(5,8,13,.12) 100%)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card-title,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card--small .feature-card-title{display:block;max-width:100%;margin:0;font-size:clamp(24px,6.6vw,31px);line-height:1.08;font-weight:560;letter-spacing:-.045em;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;text-wrap:balance;overflow-wrap:break-word}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-service .feature-card-title{max-width:96%;font-size:clamp(25px,6.4vw,30px);line-height:1.08}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card-note{max-width:96%;font-size:16px;line-height:1.4;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;overflow-wrap:break-word}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .brand-icon{flex:0 0 auto;margin:0 0 16px}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-link{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;min-width:0;max-width:100%;min-height:44px;height:44px;margin-top:auto;padding:0 18px;gap:10px;font-size:14px;line-height:1;white-space:nowrap;overflow:visible!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .link-arrow{flex:0 0 14px;width:14px;height:14px}
+}
