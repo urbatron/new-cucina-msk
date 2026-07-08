@@ -228,3 +228,29 @@
 @media (min-width:641px) and (max-width:768px){
   .project-card,.project-card:nth-child(n){min-height:430px}.showroom-card{min-height:480px}.designer-card--hero{min-height:410px}.designer-card--benefit{min-height:230px}.feature-card{min-height:210px}
 }
+
+/* Home page mobile storefront: force every navigation card to become a full card, never a bento strip. */
+@media (max-width:768px){
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .page-shell{padding:8px clamp(16px,4.4vw,20px) 24px;grid-template-rows:58px auto;row-gap:18px}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .site-header{grid-template-columns:44px minmax(0,1fr) 44px}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .main-grid{height:auto;min-height:0;overflow:visible}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-grid,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .social-column{display:flex!important;flex-direction:column!important;width:100%;height:auto;min-height:0;gap:20px;grid-template-columns:none!important;grid-template-rows:none!important;grid-template-areas:none!important;overflow:visible}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card{order:20;display:flex!important;flex:0 0 auto!important;width:100%!important;min-width:0;max-width:100%;height:auto!important;min-height:220px!important;padding:24px;border-radius:18px;overflow:hidden;grid-area:auto!important;grid-column:auto!important;grid-row:auto!important;background-size:cover!important;background-position:center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-projects{order:1;min-height:250px!important;background-position:58% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-meeting{order:2;min-height:240px!important;background-position:58% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max{order:3;min-height:220px!important;background-position:62% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .social-column{order:4}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-vk{order:1;min-height:185px!important;background-position:74% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen{order:2;min-height:185px!important;background-position:72% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-showroom{order:5;min-height:220px!important;background-position:58% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-service{order:6;min-height:235px!important;background-position:60% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-video{order:7;min-height:210px!important;background-position:62% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-designers{order:8;min-height:220px!important;background-position:56% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-wesen{order:9;min-height:220px!important;background-position:64% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card::after{background:linear-gradient(180deg,rgba(5,8,13,.08) 0%,rgba(5,8,13,.32) 42%,rgba(5,8,13,.78) 100%),linear-gradient(90deg,rgba(5,8,13,.64) 0%,rgba(5,8,13,.30) 54%,rgba(5,8,13,.10) 100%)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card-title,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card--small .feature-card-title{display:block;margin:0;max-width:min(96%,520px);font-size:clamp(25px,6.8vw,32px);line-height:1.05;letter-spacing:-.05em;white-space:normal;overflow:visible;text-overflow:clip;text-wrap:balance;color:rgba(255,255,255,.96)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card-note{display:block;max-width:min(92%,460px);font-size:16px;line-height:1.38;white-space:normal;overflow:visible;color:rgba(255,252,247,.86)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-link{display:inline-flex;flex:0 0 auto;align-self:flex-start;min-width:0;max-width:100%;min-height:44px;height:44px;margin-top:auto;padding:0 18px;gap:10px;font-size:14px;white-space:nowrap;overflow:visible}
+}
