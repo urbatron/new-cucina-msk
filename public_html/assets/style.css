@@ -315,3 +315,16 @@
   body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-link{margin-bottom:2px}
   body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max .card-link{margin-top:24px;margin-bottom:0}
 }
+
+/* Final home mobile micro-polish: softer social/media cards and even CTA baseline. */
+@media (max-width:768px){
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-vk::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-video::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max::after{background:linear-gradient(180deg,rgba(5,8,13,.035) 0%,rgba(5,8,13,.18) 42%,rgba(5,8,13,.62) 100%),linear-gradient(90deg,rgba(5,8,13,.46) 0%,rgba(5,8,13,.20) 56%,rgba(5,8,13,.055) 100%)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen{background-image:radial-gradient(circle at 82% 24%,rgba(240,223,185,.22),transparent 36%),linear-gradient(135deg,rgba(8,12,18,.24),rgba(8,12,18,.08)),url("img/bg/dzen.png")!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-vk .brand-icon--vk{opacity:1;box-shadow:0 10px 20px rgba(0,0,0,.20)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen .brand-icon--dzen{opacity:1;filter:drop-shadow(0 9px 16px rgba(0,0,0,.24))}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-link{min-height:44px;height:44px;margin-bottom:4px;gap:10px}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max .card-link{margin-top:24px;margin-bottom:4px}
+}
