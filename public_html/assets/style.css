@@ -176,3 +176,279 @@
 @media (max-width:1180px){.service-hero{grid-template-columns:minmax(0,1fr) minmax(300px,.68fr)}.service-step{grid-template-columns:1fr}.service-step h2{font-size:clamp(24px,2.2vw,30px)}.service-step p{font-size:15px}.service-hero__content p{font-size:17px}}
 @media (max-width:1024px){.service-shell{width:min(860px,calc(100vw - 28px));height:auto;min-height:100dvh}.service-main{height:auto;grid-template-rows:auto auto auto;gap:14px;padding:14px 0 32px}.service-top{align-items:start}.service-flow{gap:30px}.service-hero{grid-template-columns:1fr;min-height:0}.service-hero__content{padding:28px}.service-hero__media{min-height:280px;border-left:0;border-top:1px solid rgba(255,255,255,.055)}.service-hero__chips{left:20px;right:20px;justify-content:flex-start;max-width:none}.service-stages{grid-template-columns:1fr;gap:18px}.service-step{grid-template-columns:1fr;min-height:360px}.service-summary{grid-template-columns:1fr}.service-top h1{font-size:clamp(30px,6vw,44px)}}
 @media (max-width:640px){.service-shell{width:100%;padding:8px 14px 18px}.service-hero{border-radius:18px}.service-hero__content{padding:24px}.service-hero__content p{font-size:16px;line-height:1.56}.service-hero__media{min-height:220px}.service-hero__chips span{min-height:30px;font-size:11px;padding:0 12px}.service-step{grid-template-columns:1fr;min-height:360px;border-radius:18px}.service-step__body{width:100%;padding:28px}.service-step__visual{display:none}.service-step h2{font-size:25px}.service-step p,.service-summary p{font-size:15px;line-height:1.56}.service-summary{padding:24px;border-radius:18px}.service-summary h2{font-size:26px}}
+
+/* Mobile system pass for premium one-column layouts up to tablet width. */
+@media (max-width:768px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  body{min-width:0}
+  .page-shell,.projects-shell,.showrooms-shell,.service-shell,.designers-shell{width:100%;max-width:100%;padding:8px 14px 22px;grid-template-rows:58px auto;row-gap:16px;overflow-x:hidden}
+  .site-header,.header{height:58px;grid-template-columns:minmax(58px,74px) minmax(0,1fr) 44px;column-gap:8px}
+  .site-header::after,.header::after{background:rgba(255,255,255,.075)}
+  .logo{width:clamp(132px,38vw,168px);height:58px;min-width:0}
+  .logo img{max-height:76%}
+  .back-link{height:30px;max-width:74px;padding:0 8px;gap:4px;font-size:11px;line-height:1;white-space:nowrap;overflow:hidden;text-overflow:clip}
+  .phone-wrap{justify-self:end;width:40px;display:flex;justify-content:flex-end}
+  .phone-toggle{width:36px;height:36px;min-width:36px}
+  .phone-badge{top:43px;right:0;z-index:30}
+
+  .catalog-head h1,.showrooms-top h1,.service-top h1,.designers-top h1{font-size:clamp(34px,9.2vw,40px);line-height:1.02;letter-spacing:-.07em;margin:0;overflow-wrap:break-word;text-wrap:balance}
+  .projects-catalog,.showrooms-main,.service-main,.designers-main{gap:16px;padding:4px 0 28px;overflow-x:hidden}
+  .catalog-toolbar,.page-toolbar{display:flex;align-items:center;justify-content:flex-start;gap:0;margin:0 0 2px;min-width:0}
+  .catalog-filters.is-visually-paused,.page-toolbar-spacer{display:none!important}
+  .catalog-meeting{justify-self:start;width:100%;max-width:260px;min-height:44px;height:44px;padding:0 18px;font-size:14px;border-color:rgba(240,223,185,.22);background:rgba(216,183,128,.085)}
+
+  .feature-grid,.social-column{display:flex;flex-direction:column;gap:18px;width:100%;min-width:0}
+  .feature-card,.feature-card--small,.feature-card--large,.feature-card--wide{width:100%;min-height:190px;padding:22px;border-radius:16px;background-position:center!important;transform:none!important}
+  .feature-card::after{background:linear-gradient(180deg,rgba(5,8,13,.12) 0%,rgba(5,8,13,.40) 42%,rgba(5,8,13,.78) 100%),linear-gradient(90deg,rgba(5,8,13,.58),rgba(5,8,13,.18))}
+  .feature-card-title,.feature-card--small .feature-card-title{font-size:clamp(24px,6.4vw,30px);line-height:1.05;max-width:95%;letter-spacing:-.045em}
+  .feature-card-note{font-size:16px;max-width:94%;line-height:1.35}
+  .card-link{min-height:44px;height:44px;padding:0 17px;font-size:14px;margin-top:auto}
+
+  .projects-grid{display:flex!important;flex-direction:column;width:100%;gap:18px;grid-template-columns:none!important;grid-template-rows:none!important;grid-template-areas:none!important;grid-auto-rows:auto!important;overflow:visible}
+  .project-card,.project-card:nth-child(n),.project-card--wide{width:100%;min-height:390px;height:auto;grid-area:auto!important;grid-column:auto!important;grid-row:auto!important;border-radius:16px;overflow:hidden}
+  .project-card__shade,.project-card--wide .project-card__shade{background:linear-gradient(180deg,rgba(4,7,11,.04) 0%,rgba(4,7,11,.20) 38%,rgba(4,7,11,.84) 100%),linear-gradient(90deg,rgba(4,7,11,.62),rgba(4,7,11,.18))}
+  .project-card__body,.project-card--wide .project-card__body{display:grid;grid-template-columns:1fr;gap:12px;width:100%;padding:24px;align-self:end;grid-template-areas:none}
+  .project-card__badge,.project-card--wide .project-card__badge{top:18px;left:18px;max-width:calc(100% - 36px);min-height:28px;font-size:12px}
+  .project-card__line,.project-card--wide .project-card__line{grid-area:auto;display:flex;flex-wrap:wrap;gap:8px 12px;font-size:14px;line-height:1.35;color:rgba(255,255,255,.78)}
+  .project-card__line strong,.project-card--wide .project-card__line strong{font-size:16px;white-space:normal}
+  .project-card__action,.project-card--wide .project-card__action{grid-area:auto;width:100%;justify-content:center;min-height:44px;margin:2px 0 0;font-size:14px;white-space:nowrap}
+
+  .showrooms-grid{display:flex;flex-direction:column;gap:18px;width:100%;height:auto;overflow:visible}
+  .showroom-card{width:100%;min-height:450px;height:auto;padding:24px;border-radius:18px;align-items:flex-end}
+  .showroom-card::after{background:linear-gradient(180deg,rgba(5,8,13,.10) 0%,rgba(5,8,13,.38) 42%,rgba(5,8,13,.86) 100%),linear-gradient(90deg,rgba(5,8,13,.62),rgba(5,8,13,.18))}
+  .showroom-card h2{font-size:clamp(34px,9vw,40px);line-height:.98}
+  .showroom-card__address{font-size:15px;line-height:1.45;overflow-wrap:break-word}
+  .showroom-card__phone{font-size:16px}.showroom-card__cta{width:100%;min-height:44px;font-size:14px}
+
+  .service-flow{gap:22px}.service-hero{min-height:auto;border-radius:18px;background-image:linear-gradient(180deg,rgba(5,8,13,.60),rgba(5,8,13,.88)),url("img/bg/svoia-service.png");background-position:center}.service-hero__content{padding:24px}.service-stages{display:flex;flex-direction:column;gap:18px}.service-step{width:100%;min-height:0;height:auto;overflow:visible;border-radius:18px;align-items:flex-end}.service-card::after{background:linear-gradient(180deg,rgba(5,8,13,.44),rgba(5,8,13,.88)),linear-gradient(90deg,rgba(6,10,16,.74),rgba(6,10,16,.20))}.service-step__body{padding:24px;gap:16px}.service-step h2{font-size:clamp(24px,6.8vw,29px);line-height:1.12}.service-step p{font-size:15.5px;line-height:1.58}.service-summary{grid-template-columns:1fr;min-height:auto;padding:24px;gap:16px;overflow:visible}.service-summary h2{font-size:30px}.service-summary p:last-child{font-size:18px}
+
+  .designers-bento{display:flex!important;flex-direction:column;width:100%;height:auto;gap:18px;grid-template-columns:none!important;grid-template-areas:none!important;overflow:visible}.designer-card{width:100%;min-width:0;border-radius:18px;overflow:hidden}.designer-card--hero{min-height:360px;padding:24px;grid-area:auto!important}.designer-card--hero h2{font-size:clamp(34px,9vw,40px);line-height:1.02}.designer-card--benefit{min-height:210px;padding:24px;grid-area:auto!important}.designer-card--benefit h2{font-size:clamp(24px,6.5vw,30px);line-height:1.08}.designer-card p{font-size:15.5px;line-height:1.48}.designer-card--client{display:grid;grid-template-columns:1fr;gap:14px;padding:22px;grid-area:auto!important}.designer-chips{gap:9px}.designer-chips span{white-space:normal;min-height:32px;font-size:12.5px}.designer-card__cta,.designer-card__link{min-height:44px;font-size:14px}
+}
+
+@media (min-width:641px) and (max-width:768px){
+  .project-card,.project-card:nth-child(n){min-height:430px}.showroom-card{min-height:480px}.designer-card--hero{min-height:410px}.designer-card--benefit{min-height:230px}.feature-card{min-height:210px}
+}
+
+/* Home page mobile storefront: force every navigation card to become a full card, never a bento strip. */
+@media (max-width:768px){
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .page-shell{padding:8px clamp(16px,4.4vw,20px) 24px;grid-template-rows:58px auto;row-gap:18px}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .site-header{grid-template-columns:44px minmax(0,1fr) 44px}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .main-grid{height:auto;min-height:0;overflow:visible}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-grid,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .social-column{display:flex!important;flex-direction:column!important;width:100%;height:auto;min-height:0;gap:20px;grid-template-columns:none!important;grid-template-rows:none!important;grid-template-areas:none!important;overflow:visible}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card{order:20;display:flex!important;flex:0 0 auto!important;width:100%!important;min-width:0;max-width:100%;height:auto!important;min-height:220px!important;padding:24px;border-radius:18px;overflow:hidden;grid-area:auto!important;grid-column:auto!important;grid-row:auto!important;background-size:cover!important;background-position:center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-projects{order:1;min-height:250px!important;background-position:58% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-meeting{order:2;min-height:240px!important;background-position:58% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max{order:3;min-height:220px!important;background-position:62% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .social-column{order:4}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-vk{order:1;min-height:185px!important;background-position:74% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen{order:2;min-height:185px!important;background-position:72% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-showroom{order:5;min-height:220px!important;background-position:58% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-service{order:6;min-height:235px!important;background-position:60% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-video{order:7;min-height:210px!important;background-position:62% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-designers{order:8;min-height:220px!important;background-position:56% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-wesen{order:9;min-height:220px!important;background-position:64% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card::after{background:linear-gradient(180deg,rgba(5,8,13,.08) 0%,rgba(5,8,13,.32) 42%,rgba(5,8,13,.78) 100%),linear-gradient(90deg,rgba(5,8,13,.64) 0%,rgba(5,8,13,.30) 54%,rgba(5,8,13,.10) 100%)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card-title,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card--small .feature-card-title{display:block;margin:0;max-width:min(96%,520px);font-size:clamp(25px,6.8vw,32px);line-height:1.05;letter-spacing:-.05em;white-space:normal;overflow:visible;text-overflow:clip;text-wrap:balance;color:rgba(255,255,255,.96)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card-note{display:block;max-width:min(92%,460px);font-size:16px;line-height:1.38;white-space:normal;overflow:visible;color:rgba(255,252,247,.86)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-link{display:inline-flex;flex:0 0 auto;align-self:flex-start;min-width:0;max-width:100%;min-height:44px;height:44px;margin-top:auto;padding:0 18px;gap:10px;font-size:14px;white-space:nowrap;overflow:visible}
+}
+
+/* Home mobile hardening: no cropped cards, no desktop bento remnants. */
+@media (max-width:768px){
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page){overflow-x:hidden}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .page-shell{width:100%;max-width:100%;height:auto;min-height:100dvh;padding:8px clamp(18px,4.8vw,20px) 26px;display:grid;grid-template-rows:58px auto;row-gap:20px}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .main-grid{display:block;width:100%;height:auto!important;min-height:0;overflow:visible;isolation:isolate}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-grid{display:flex!important;flex-direction:column!important;width:100%;height:auto!important;min-height:0;gap:22px;grid-template-columns:none!important;grid-template-rows:none!important;grid-template-areas:none!important;overflow:visible}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .social-column{display:flex!important;flex-direction:column!important;order:4;width:100%;height:auto!important;min-height:0;gap:22px;grid-row:auto!important;grid-column:auto!important;grid-area:auto!important;overflow:visible}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card--large,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card--small,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card--wide{position:relative;display:flex!important;flex:0 0 auto!important;flex-direction:column;align-items:flex-start;justify-content:flex-start;width:100%!important;max-width:100%;min-width:0;height:auto!important;min-height:220px!important;padding:26px 24px!important;margin:0!important;border-radius:18px;grid-column:auto!important;grid-row:auto!important;grid-area:auto!important;transform:none!important;translate:none!important;background-size:cover!important;overflow:hidden}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card>*{position:relative;z-index:1;transform:none!important;translate:none!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-projects{order:1;min-height:260px!important;background-position:58% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-meeting{order:2;min-height:255px!important;background-position:58% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max{order:3;min-height:240px!important;padding-top:28px!important;background-position:62% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-vk{order:1;min-height:205px!important;background-position:74% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen{order:2;display:flex!important;min-height:205px!important;background-position:72% center!important;visibility:visible!important;opacity:1!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-showroom{order:5;min-height:235px!important;background-position:58% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-service{order:6;min-height:280px!important;padding-bottom:26px!important;background-position:60% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-video{order:7;min-height:225px!important;background-position:62% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-designers{order:8;min-height:235px!important;background-position:56% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-wesen{order:9;min-height:235px!important;background-position:64% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card::after{background:linear-gradient(180deg,rgba(5,8,13,.10) 0%,rgba(5,8,13,.30) 38%,rgba(5,8,13,.78) 100%),linear-gradient(90deg,rgba(5,8,13,.68) 0%,rgba(5,8,13,.36) 52%,rgba(5,8,13,.12) 100%)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card-title,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card--small .feature-card-title{display:block;max-width:100%;margin:0;font-size:clamp(24px,6.6vw,31px);line-height:1.08;font-weight:560;letter-spacing:-.045em;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;text-wrap:balance;overflow-wrap:break-word}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-service .feature-card-title{max-width:96%;font-size:clamp(25px,6.4vw,30px);line-height:1.08}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card-note{max-width:96%;font-size:16px;line-height:1.4;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;overflow-wrap:break-word}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .brand-icon{flex:0 0 auto;margin:0 0 16px}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-link{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;min-width:0;max-width:100%;min-height:44px;height:44px;margin-top:auto;padding:0 18px;gap:10px;font-size:14px;line-height:1;white-space:nowrap;overflow:visible!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .link-arrow{flex:0 0 14px;width:14px;height:14px}
+}
+
+/* Final home mobile visual polish: agreed backgrounds, Dzen presence, calm MAX rhythm. */
+@media (max-width:768px){
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-meeting{background-image:linear-gradient(180deg,rgba(8,12,18,.18) 0%,rgba(8,12,18,.26) 46%,rgba(8,12,18,.72) 100%),linear-gradient(90deg,rgba(8,12,18,.62) 0%,rgba(8,12,18,.34) 58%,rgba(8,12,18,.10) 100%),url("img/bg/disiner.png"),url("img/bg/diziner.png")!important;background-position:center,center,62% center,62% center!important;background-size:cover!important;background-repeat:no-repeat!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-wesen{background-image:linear-gradient(180deg,rgba(8,12,18,.16) 0%,rgba(8,12,18,.28) 48%,rgba(8,12,18,.70) 100%),linear-gradient(90deg,rgba(8,12,18,.62) 0%,rgba(8,12,18,.30) 56%,rgba(8,12,18,.10) 100%),url("img/bg/more.png"),url("img/bg/akcii.png")!important;background-position:center,center,68% center,72% center!important;background-size:cover!important;background-repeat:no-repeat!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen{background-image:radial-gradient(circle at 82% 24%,rgba(240,223,185,.16),transparent 34%),linear-gradient(135deg,rgba(8,12,18,.38),rgba(8,12,18,.18)),url("img/bg/dzen.png")!important;background-position:center,center,70% center!important;background-size:cover!important;background-repeat:no-repeat!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen::after{background:linear-gradient(180deg,rgba(5,8,13,.08) 0%,rgba(5,8,13,.24) 42%,rgba(5,8,13,.62) 100%),linear-gradient(90deg,rgba(5,8,13,.48),rgba(5,8,13,.10))}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen .brand-icon--dzen{width:34px;height:34px;margin-bottom:18px;opacity:.96;filter:drop-shadow(0 10px 20px rgba(0,0,0,.34))}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen .card-link{margin-top:auto;background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.14)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max{padding-bottom:32px!important;background-position:64% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max .card-link{margin-top:26px}
+}
+
+/* Final home mobile light balance: keep readability, reveal more image detail. */
+@media (max-width:768px){
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-vk::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-video::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-wesen::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max::after{background:linear-gradient(180deg,rgba(5,8,13,.04) 0%,rgba(5,8,13,.20) 42%,rgba(5,8,13,.66) 100%),linear-gradient(90deg,rgba(5,8,13,.50) 0%,rgba(5,8,13,.22) 56%,rgba(5,8,13,.06) 100%)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-meeting::after{background:linear-gradient(180deg,rgba(5,8,13,.04) 0%,rgba(5,8,13,.18) 45%,rgba(5,8,13,.68) 100%),linear-gradient(90deg,rgba(5,8,13,.54) 0%,rgba(5,8,13,.22) 58%,rgba(5,8,13,.06) 100%)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen{background-image:radial-gradient(circle at 82% 24%,rgba(240,223,185,.20),transparent 36%),linear-gradient(135deg,rgba(8,12,18,.28),rgba(8,12,18,.10)),url("img/bg/dzen.png")!important;background-position:center,center,70% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-wesen{background-position:center,center,66% center,78% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-meeting{background-position:center,center,60% center,60% center!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-vk .brand-icon--vk{width:32px;height:32px;border-radius:9px;font-size:12px;opacity:.96;box-shadow:0 10px 22px rgba(0,0,0,.22)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen .brand-icon--dzen{width:36px;height:36px;opacity:1;filter:drop-shadow(0 10px 18px rgba(0,0,0,.26))}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-link{margin-bottom:2px}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max .card-link{margin-top:24px;margin-bottom:0}
+}
+
+/* Final home mobile micro-polish: softer social/media cards and even CTA baseline. */
+@media (max-width:768px){
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-vk::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-video::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max::after{background:linear-gradient(180deg,rgba(5,8,13,.035) 0%,rgba(5,8,13,.18) 42%,rgba(5,8,13,.62) 100%),linear-gradient(90deg,rgba(5,8,13,.46) 0%,rgba(5,8,13,.20) 56%,rgba(5,8,13,.055) 100%)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen{background-image:radial-gradient(circle at 82% 24%,rgba(240,223,185,.22),transparent 36%),linear-gradient(135deg,rgba(8,12,18,.24),rgba(8,12,18,.08)),url("img/bg/dzen.png")!important}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-vk .brand-icon--vk{opacity:1;box-shadow:0 10px 20px rgba(0,0,0,.20)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen .brand-icon--dzen{opacity:1;filter:drop-shadow(0 9px 16px rgba(0,0,0,.24))}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-link{min-height:44px;height:44px;margin-bottom:4px;gap:10px}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max .card-link{margin-top:24px;margin-bottom:4px}
+}
+
+/* Home mobile edge cleanup: prevent light bleed along rounded card edges. */
+@media (max-width:768px){
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card{background-color:#0b111b;overflow:hidden;isolation:isolate;background-clip:padding-box}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card::after{inset:-1px;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,255,255,.045),inset 0 0 28px rgba(0,0,0,.24)}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-vk::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-dzen::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-video::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-wesen::after,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-meeting::after{box-shadow:inset 0 0 0 1px rgba(255,255,255,.04),inset 0 0 32px rgba(0,0,0,.26)}
+}
+
+/* Final home mobile MAX edge polish: mute left-side light bleed only. */
+@media (max-width:768px){
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card::before,
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .feature-card::after{border-radius:inherit}
+  body:not(.projects-page):not(.showrooms-page):not(.service-page):not(.designers-page) .card-max::after{inset:-1px;background:linear-gradient(180deg,rgba(5,8,13,.035) 0%,rgba(5,8,13,.18) 42%,rgba(5,8,13,.62) 100%),linear-gradient(90deg,rgba(5,8,13,.72) 0%,rgba(5,8,13,.52) 18%,rgba(5,8,13,.24) 52%,rgba(5,8,13,.06) 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.04),inset 0 0 32px rgba(0,0,0,.26)}
+}
+
+/* Projects mobile catalog polish: titles, lighter photos, calmer CTA rhythm. */
+@media (max-width:768px){
+  .projects-page .catalog-meeting{width:auto;max-width:260px;min-height:42px;height:42px;padding:0 17px;border-color:rgba(240,223,185,.18);background:rgba(255,255,255,.025);font-size:13px}
+  .projects-page .projects-grid{gap:20px}
+  .projects-page .project-card,.projects-page .project-card:nth-child(n),.projects-page .project-card--wide{min-height:440px;border-radius:18px;background-color:#0b111b;overflow:hidden;isolation:isolate}
+  .projects-page .project-card:first-child{min-height:480px}
+  .projects-page .project-card__image{filter:contrast(1.03) saturate(1.03) brightness(1.04);object-position:center center;transform:scale(1.006)}
+  .projects-page .project-card:nth-child(2) .project-card__image{object-position:58% center}
+  .projects-page .project-card:nth-child(3) .project-card__image{object-position:42% center}
+  .projects-page .project-card:nth-child(4) .project-card__image{object-position:60% center}
+  .projects-page .project-card:nth-child(5) .project-card__image{object-position:46% center}
+  .projects-page .project-card:nth-child(6) .project-card__image{object-position:62% center}
+  .projects-page .project-card__shade,.projects-page .project-card--wide .project-card__shade{inset:-1px;border-radius:inherit;background:linear-gradient(180deg,rgba(4,7,11,.02) 0%,rgba(4,7,11,.10) 42%,rgba(4,7,11,.70) 100%),linear-gradient(90deg,rgba(4,7,11,.44) 0%,rgba(4,7,11,.16) 62%,rgba(4,7,11,.04) 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.035),inset 0 0 26px rgba(0,0,0,.18)}
+  .projects-page .project-card__badge,.projects-page .project-card--wide .project-card__badge{top:18px;left:18px;border-color:rgba(255,255,255,.13);background:rgba(10,16,26,.26);color:rgba(255,255,255,.84)}
+  .projects-page .project-card__body,.projects-page .project-card--wide .project-card__body{display:grid;grid-template-columns:1fr;grid-template-areas:none;gap:13px;width:100%;padding:28px 22px 30px;align-self:end}
+  .projects-page .project-card__title,.projects-page .project-card--wide .project-card__title{display:-webkit-box;grid-area:auto;margin:0;max-width:100%;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;color:rgba(255,255,255,.96);font-size:clamp(23px,6.2vw,28px);line-height:1.08;font-weight:610;letter-spacing:-.045em;text-shadow:0 2px 8px rgba(0,0,0,.42)}
+  .projects-page .project-card__line,.projects-page .project-card--wide .project-card__line{grid-area:auto;display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 10px;color:rgba(255,252,247,.78);font-size:14px;line-height:1.35;text-shadow:0 1px 5px rgba(0,0,0,.38)}
+  .projects-page .project-card__line strong,.projects-page .project-card--wide .project-card__line strong{color:rgba(240,223,185,.94);font-size:15px;white-space:normal}
+  .projects-page .project-card__action,.projects-page .project-card--wide .project-card__action{grid-area:auto;justify-self:start;width:auto;min-width:188px;min-height:44px;margin-top:4px;padding:0 16px;border-color:rgba(255,255,255,.12);background:rgba(10,16,26,.20);color:rgba(255,255,255,.90);font-size:13px;font-weight:640;gap:10px;white-space:nowrap}
+}
+
+/* Projects mobile final balance: hero lead card, lighter catalog rhythm. */
+@media (max-width:768px){
+  .projects-page .project-card,.projects-page .project-card:nth-child(n),.projects-page .project-card--wide{min-height:415px}
+  .projects-page .project-card:first-child{min-height:490px}
+  .projects-page .project-card__image{filter:contrast(1.025) saturate(1.025) brightness(1.065);transform:scale(1.004)}
+  .projects-page .project-card__shade,.projects-page .project-card--wide .project-card__shade{background:linear-gradient(180deg,rgba(4,7,11,.015) 0%,rgba(4,7,11,.07) 44%,rgba(4,7,11,.62) 100%),linear-gradient(90deg,rgba(4,7,11,.38) 0%,rgba(4,7,11,.13) 62%,rgba(4,7,11,.035) 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.03),inset 0 0 22px rgba(0,0,0,.16)}
+  .projects-page .project-card__body,.projects-page .project-card--wide .project-card__body{gap:14px;padding:26px 22px 42px}
+  .projects-page .project-card__title,.projects-page .project-card--wide .project-card__title{font-size:clamp(22px,6vw,27px);line-height:1.08;text-shadow:0 2px 7px rgba(0,0,0,.38)}
+  .projects-page .project-card__line,.projects-page .project-card--wide .project-card__line{margin-bottom:2px;color:rgba(255,252,247,.80)}
+  .projects-page .project-card__action,.projects-page .project-card--wide .project-card__action{min-height:44px;min-width:178px;margin-top:8px;padding:0 15px;border-color:rgba(255,255,255,.095);background:rgba(10,16,26,.14);color:rgba(255,255,255,.88);font-size:13px;box-shadow:none}
+  .projects-page .project-card__action span,.projects-page .project-card--wide .project-card__action span{color:rgba(240,223,185,.78)}
+  .projects-page .catalog-meeting{border-color:rgba(255,255,255,.10);background:rgba(255,255,255,.018);color:rgba(255,255,255,.88)}
+}
+
+/* Projects mobile final micro-polish: lighter badges, even CTA seating. */
+@media (max-width:768px){
+  .projects-page .catalog-meeting{color:rgba(255,255,255,.94);border-color:rgba(240,223,185,.16);background:rgba(255,255,255,.022);box-shadow:inset 0 1px 0 rgba(255,255,255,.025)}
+  .projects-page .project-card:first-child .project-card__image{object-position:54% 56%}
+  .projects-page .project-card__badge,.projects-page .project-card--wide .project-card__badge{min-height:27px;padding:0 11px;border-color:rgba(240,223,185,.16);background:rgba(10,16,26,.18);color:rgba(255,250,242,.90);font-size:11.5px;letter-spacing:.01em;box-shadow:inset 0 1px 0 rgba(255,255,255,.025)}
+  .projects-page .project-card__body,.projects-page .project-card--wide .project-card__body{align-content:end;padding-bottom:40px}
+  .projects-page .project-card__action,.projects-page .project-card--wide .project-card__action{margin-top:8px;margin-bottom:0;border-width:1px;border-color:rgba(240,223,185,.12);background:rgba(10,16,26,.12);color:rgba(255,255,255,.90)}
+}
+
+/* Projects mobile premium gradient pass: remove hard left column feel. */
+@media (max-width:768px){
+  .projects-page .project-card__shade,.projects-page .project-card--wide .project-card__shade{background:linear-gradient(180deg,rgba(4,7,11,0) 0%,rgba(4,7,11,.045) 46%,rgba(4,7,11,.58) 100%),radial-gradient(ellipse at 24% 86%,rgba(4,7,11,.46) 0%,rgba(4,7,11,.30) 34%,rgba(4,7,11,.10) 58%,rgba(4,7,11,0) 78%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.028),inset 0 0 20px rgba(0,0,0,.14)}
+  .projects-page .project-card__badge,.projects-page .project-card--wide .project-card__badge{border-color:rgba(240,223,185,.13);background:rgba(10,16,26,.13);backdrop-filter:blur(3px);color:rgba(255,250,242,.88);box-shadow:none}
+  .projects-page .project-card__action,.projects-page .project-card--wide .project-card__action{border-color:rgba(240,223,185,.095);background:rgba(10,16,26,.09);color:rgba(255,255,255,.88);font-weight:620;box-shadow:none;backdrop-filter:blur(3px)}
+  .projects-page .project-card__action span,.projects-page .project-card--wide .project-card__action span{color:rgba(240,223,185,.72)}
+}
+
+/* Premium project modal: gallery-first, calm details, mobile-safe layout. */
+.project-modal{padding:clamp(12px,2.2vw,24px)}
+.project-modal__backdrop{background:rgba(4,7,11,.66);backdrop-filter:blur(10px)}
+.project-modal__dialog{width:min(1080px,calc(100vw - 40px));max-height:min(760px,calc(100dvh - 40px));grid-template-columns:minmax(0,1.12fr) minmax(340px,.88fr);border-color:rgba(240,223,185,.12);border-radius:22px;background:linear-gradient(180deg,rgba(18,25,36,.98),rgba(8,13,21,.98));box-shadow:0 34px 90px rgba(0,0,0,.52),inset 0 1px 0 rgba(255,255,255,.035)}
+.project-modal__close{top:14px;right:14px;z-index:5;width:32px;height:32px;border-color:rgba(255,255,255,.12);background:rgba(8,13,21,.58);backdrop-filter:blur(6px);color:rgba(255,255,255,.78);font-size:18px;transition:background .2s,border-color .2s,color .2s}.project-modal__close:hover{border-color:rgba(240,223,185,.24);background:rgba(14,20,31,.72);color:#fff}
+.project-modal__gallery{--thumb-strip:74px;display:grid;grid-template-rows:minmax(0,1fr) auto;gap:10px;min-height:560px;padding:0 0 14px;background:#0b111b;overflow:hidden}.project-modal__image{width:100%;height:100%;min-height:0;aspect-ratio:16/10;object-fit:cover;border-radius:21px 0 0 0}.project-modal__arrow{top:calc((100% - var(--thumb-strip))/2);width:30px;height:30px;border-color:rgba(255,255,255,.13);background:rgba(8,13,21,.42);backdrop-filter:blur(5px);color:rgba(255,255,255,.82);font-size:14px;transition:background .2s,border-color .2s,color .2s}.project-modal__arrow:hover{border-color:rgba(240,223,185,.24);background:rgba(14,20,31,.66);color:#fff}.project-modal__arrow--prev{left:14px}.project-modal__arrow--next{right:14px}
+.project-modal__thumbs{position:static;z-index:1;display:flex;gap:8px;overflow-x:auto;padding:0 14px 2px;scrollbar-width:none}.project-modal__thumbs::-webkit-scrollbar{display:none}.project-modal__thumb{flex:0 0 62px;width:62px;height:52px;border-color:rgba(255,255,255,.10);border-radius:10px;background:rgba(255,255,255,.025);opacity:.70}.project-modal__thumb.is-active,.project-modal__thumb:hover{opacity:1;border-color:rgba(240,223,185,.58)}
+.project-modal__content{gap:16px;padding:clamp(26px,3vw,38px)}.project-modal__eyebrow{color:rgba(240,223,185,.72);font-size:10.5px;letter-spacing:.14em}.project-modal__content h2{font-size:clamp(28px,2.25vw,38px);line-height:1.06;letter-spacing:-.06em}.project-modal__content p{color:rgba(255,252,247,.76);font-size:15px;line-height:1.54}.project-modal__content dl{gap:0;margin-top:4px}.project-modal__content dl div{grid-template-columns:122px minmax(0,1fr);gap:16px;padding:12px 0;border-top:1px solid rgba(255,255,255,.055)}.project-modal__content dt{color:rgba(185,176,165,.68);font-size:12px;line-height:1.35}.project-modal__content dd{color:rgba(255,255,255,.88);font-size:13.5px;line-height:1.45;overflow-wrap:break-word}.project-modal__cta{width:100%;min-height:48px;margin-top:auto;border-color:rgba(240,223,185,.28);background:rgba(216,183,128,.075);font-size:13px;letter-spacing:.005em;transition:background .2s,border-color .2s,transform .2s}.project-modal__cta:hover{border-color:rgba(240,223,185,.38);background:rgba(216,183,128,.11);transform:translateY(-1px)}
+@media (max-width:768px){.project-modal{align-items:center;padding:12px}.project-modal__dialog{width:min(420px,calc(100vw - 24px));max-height:92dvh;display:grid;grid-template-columns:1fr;overflow-y:auto;overflow-x:hidden;border-radius:20px}.project-modal__close{top:12px;right:12px;width:30px;height:30px;font-size:17px}.project-modal__gallery{--thumb-strip:68px;min-height:0;grid-template-rows:auto auto;gap:9px;padding-bottom:12px}.project-modal__image{height:clamp(240px,68vw,300px);min-height:0;aspect-ratio:4/3;border-radius:19px 19px 0 0}.project-modal__arrow{top:calc((100% - var(--thumb-strip))/2);width:29px;height:29px}.project-modal__arrow--prev{left:10px}.project-modal__arrow--next{right:10px}.project-modal__thumbs{gap:7px;padding:0 12px 1px}.project-modal__thumb{flex-basis:56px;width:56px;height:48px;border-radius:9px}.project-modal__content{gap:14px;padding:22px 20px 24px}.project-modal__content h2{font-size:clamp(24px,6.5vw,28px);line-height:1.1}.project-modal__content p{font-size:15px;line-height:1.52}.project-modal__content dl div{grid-template-columns:96px minmax(0,1fr);gap:12px;padding:11px 0}.project-modal__content dt{font-size:11.5px}.project-modal__content dd{font-size:13px}.project-modal__cta{min-height:48px;margin-top:4px}}
+
+/* Project modal mobile readability pass: wider card, clean title, calmer facts. */
+@media (max-width:768px){
+  .project-modal{padding:10px}
+  .project-modal__dialog{width:min(430px,calc(100vw - 20px));max-height:92dvh;margin:10px auto;border-radius:20px}
+  .project-modal__close{top:11px;right:11px;width:28px;height:28px;font-size:16px;background:rgba(8,13,21,.50);border-color:rgba(255,255,255,.10);color:rgba(255,255,255,.74)}
+  .project-modal__arrow{width:27px;height:27px;background:rgba(8,13,21,.30);border-color:rgba(255,255,255,.10);color:rgba(255,255,255,.72)}
+  .project-modal__thumbs{gap:6px;padding:0 12px 2px}.project-modal__thumb{flex-basis:52px;width:52px;height:44px;border-radius:8px;border-color:rgba(255,255,255,.09)}.project-modal__thumb.is-active,.project-modal__thumb:hover{border-color:rgba(240,223,185,.46)}
+  .project-modal__content{gap:16px;padding:24px 24px 26px}.project-modal__eyebrow{font-size:10px;letter-spacing:.13em;color:rgba(240,223,185,.68)}.project-modal__content h2{font-size:clamp(22px,6vw,24px);line-height:1.12;letter-spacing:-.01em;word-spacing:.04em;white-space:normal;overflow-wrap:normal}.project-modal__content p{font-size:14.5px;line-height:1.52;color:rgba(255,252,247,.76)}
+  .project-modal__content dl{gap:0;margin-top:2px}.project-modal__content dl div{display:grid;grid-template-columns:1fr;gap:5px;padding:13px 0;border-top:1px solid rgba(255,255,255,.055)}.project-modal__content dt{font-size:11px;line-height:1.25;color:rgba(185,176,165,.66)}.project-modal__content dd{font-size:13.5px;line-height:1.45;color:rgba(255,255,255,.90)}
+  .project-modal__cta{min-height:50px;margin-top:2px;border-color:rgba(240,223,185,.30);background:rgba(216,183,128,.085);font-size:13px}
+}
+
+/* Project modal mobile final polish: lighter gallery, clearer facts, confident CTA. */
+@media (max-width:768px){
+  .project-modal__image{height:clamp(226px,63vw,282px)}
+  .project-modal__close{background:rgba(8,13,21,.42);border-color:rgba(255,255,255,.08);color:rgba(255,255,255,.70)}.project-modal__close:hover{background:rgba(14,20,31,.58);border-color:rgba(240,223,185,.16)}
+  .project-modal__arrow{background:rgba(8,13,21,.22);border-color:rgba(255,255,255,.08);color:rgba(255,255,255,.66)}.project-modal__arrow:hover{background:rgba(14,20,31,.48);border-color:rgba(240,223,185,.16)}
+  .project-modal__thumbs{gap:8px;padding:2px 12px 2px}.project-modal__thumb.is-active,.project-modal__thumb:hover{border-color:rgba(240,223,185,.36)}
+  .project-modal__content{padding-top:28px}.project-modal__eyebrow{color:rgba(240,223,185,.62);font-weight:680}
+  .project-modal__content dl div{border-top-color:rgba(255,255,255,.04)}.project-modal__content dt{color:rgba(185,176,165,.76)}
+  .project-modal__cta{margin-bottom:4px;border-color:rgba(240,223,185,.36);background:rgba(216,183,128,.09);color:#fff8ed;font-weight:720}
+}
+
+/* Desktop project modal final polish: wider, calmer, gallery-first. */
+@media (min-width:769px){
+  .project-modal{padding:clamp(28px,3vw,48px)}
+  .project-modal__dialog{width:min(1200px,calc(100vw - 96px));max-height:min(88dvh,820px);grid-template-columns:minmax(0,1.16fr) minmax(360px,.84fr);border-color:rgba(240,223,185,.10);border-radius:24px}
+  .project-modal__gallery{min-height:590px;gap:12px;padding:14px 14px 18px;background:#0a111c}.project-modal__image{border-radius:16px;box-shadow:0 16px 34px rgba(0,0,0,.18)}
+  .project-modal__arrow{width:29px;height:29px;border-color:rgba(255,255,255,.10);background:rgba(8,13,21,.30);color:rgba(255,255,255,.72)}.project-modal__arrow:hover{border-color:rgba(240,223,185,.18);background:rgba(14,20,31,.54)}.project-modal__arrow--prev{left:28px}.project-modal__arrow--next{right:28px}
+  .project-modal__thumbs{gap:8px;padding:2px 2px 0}.project-modal__thumb{height:50px;border-color:rgba(255,255,255,.09);background:rgba(255,255,255,.02)}.project-modal__thumb.is-active,.project-modal__thumb:hover{border-color:rgba(240,223,185,.44)}
+  .project-modal__content{padding:clamp(34px,3.2vw,46px);gap:17px}.project-modal__eyebrow{color:rgba(240,223,185,.66);letter-spacing:.15em}.project-modal__content h2{line-height:1.07}.project-modal__content p{color:rgba(255,252,247,.78);line-height:1.56}.project-modal__content dl div{border-top-color:rgba(255,255,255,.045);padding:13px 0}.project-modal__content dt{color:rgba(185,176,165,.76)}
+  .project-modal__cta{border-color:rgba(240,223,185,.34);background:rgba(216,183,128,.085);color:#fff8ed}.project-modal__cta:hover{border-color:rgba(240,223,185,.44);background:rgba(216,183,128,.12)}
+  .project-modal__close{background:rgba(8,13,21,.46);border-color:rgba(255,255,255,.09);color:rgba(255,255,255,.72)}.project-modal__close:hover{border-color:rgba(240,223,185,.18);background:rgba(14,20,31,.62)}
+}
+
+/* Desktop project modal controls micro-polish. */
+@media (min-width:769px){
+  .project-modal__arrow{background:rgba(8,13,21,.22);border-color:rgba(255,255,255,.075);color:rgba(255,255,255,.66)}.project-modal__arrow:hover{background:rgba(14,20,31,.42);border-color:rgba(240,223,185,.14);color:rgba(255,255,255,.82)}
+  .project-modal__close{background:rgba(8,13,21,.38);border-color:rgba(255,255,255,.075);color:rgba(255,255,255,.66)}.project-modal__close:hover{background:rgba(14,20,31,.52);border-color:rgba(240,223,185,.14);color:rgba(255,255,255,.86)}
+  .project-modal__thumb{opacity:.64;border-color:rgba(255,255,255,.075)}.project-modal__thumb.is-active,.project-modal__thumb:hover{opacity:1;border-color:rgba(240,223,185,.36)}
+  .project-modal__content dt{color:rgba(185,176,165,.78)}
+}
