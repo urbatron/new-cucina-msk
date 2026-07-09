@@ -444,3 +444,11 @@
   .project-modal__cta{border-color:rgba(240,223,185,.34);background:rgba(216,183,128,.085);color:#fff8ed}.project-modal__cta:hover{border-color:rgba(240,223,185,.44);background:rgba(216,183,128,.12)}
   .project-modal__close{background:rgba(8,13,21,.46);border-color:rgba(255,255,255,.09);color:rgba(255,255,255,.72)}.project-modal__close:hover{border-color:rgba(240,223,185,.18);background:rgba(14,20,31,.62)}
 }
+
+/* Desktop project modal controls micro-polish. */
+@media (min-width:769px){
+  .project-modal__arrow{background:rgba(8,13,21,.22);border-color:rgba(255,255,255,.075);color:rgba(255,255,255,.66)}.project-modal__arrow:hover{background:rgba(14,20,31,.42);border-color:rgba(240,223,185,.14);color:rgba(255,255,255,.82)}
+  .project-modal__close{background:rgba(8,13,21,.38);border-color:rgba(255,255,255,.075);color:rgba(255,255,255,.66)}.project-modal__close:hover{background:rgba(14,20,31,.52);border-color:rgba(240,223,185,.14);color:rgba(255,255,255,.86)}
+  .project-modal__thumb{opacity:.64;border-color:rgba(255,255,255,.075)}.project-modal__thumb.is-active,.project-modal__thumb:hover{opacity:1;border-color:rgba(240,223,185,.36)}
+  .project-modal__content dt{color:rgba(185,176,165,.78)}
+}
