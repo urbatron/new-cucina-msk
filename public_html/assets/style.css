@@ -382,3 +382,12 @@
   .projects-page .project-card__action span,.projects-page .project-card--wide .project-card__action span{color:rgba(240,223,185,.78)}
   .projects-page .catalog-meeting{border-color:rgba(255,255,255,.10);background:rgba(255,255,255,.018);color:rgba(255,255,255,.88)}
 }
+
+/* Projects mobile final micro-polish: lighter badges, even CTA seating. */
+@media (max-width:768px){
+  .projects-page .catalog-meeting{color:rgba(255,255,255,.94);border-color:rgba(240,223,185,.16);background:rgba(255,255,255,.022);box-shadow:inset 0 1px 0 rgba(255,255,255,.025)}
+  .projects-page .project-card:first-child .project-card__image{object-position:54% 56%}
+  .projects-page .project-card__badge,.projects-page .project-card--wide .project-card__badge{min-height:27px;padding:0 11px;border-color:rgba(240,223,185,.16);background:rgba(10,16,26,.18);color:rgba(255,250,242,.90);font-size:11.5px;letter-spacing:.01em;box-shadow:inset 0 1px 0 rgba(255,255,255,.025)}
+  .projects-page .project-card__body,.projects-page .project-card--wide .project-card__body{align-content:end;padding-bottom:40px}
+  .projects-page .project-card__action,.projects-page .project-card--wide .project-card__action{margin-top:8px;margin-bottom:0;border-width:1px;border-color:rgba(240,223,185,.12);background:rgba(10,16,26,.12);color:rgba(255,255,255,.90)}
+}
