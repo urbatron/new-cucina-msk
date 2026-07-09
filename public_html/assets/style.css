@@ -421,3 +421,14 @@
   .project-modal__content dl{gap:0;margin-top:2px}.project-modal__content dl div{display:grid;grid-template-columns:1fr;gap:5px;padding:13px 0;border-top:1px solid rgba(255,255,255,.055)}.project-modal__content dt{font-size:11px;line-height:1.25;color:rgba(185,176,165,.66)}.project-modal__content dd{font-size:13.5px;line-height:1.45;color:rgba(255,255,255,.90)}
   .project-modal__cta{min-height:50px;margin-top:2px;border-color:rgba(240,223,185,.30);background:rgba(216,183,128,.085);font-size:13px}
 }
+
+/* Project modal mobile final polish: lighter gallery, clearer facts, confident CTA. */
+@media (max-width:768px){
+  .project-modal__image{height:clamp(226px,63vw,282px)}
+  .project-modal__close{background:rgba(8,13,21,.42);border-color:rgba(255,255,255,.08);color:rgba(255,255,255,.70)}.project-modal__close:hover{background:rgba(14,20,31,.58);border-color:rgba(240,223,185,.16)}
+  .project-modal__arrow{background:rgba(8,13,21,.22);border-color:rgba(255,255,255,.08);color:rgba(255,255,255,.66)}.project-modal__arrow:hover{background:rgba(14,20,31,.48);border-color:rgba(240,223,185,.16)}
+  .project-modal__thumbs{gap:8px;padding:2px 12px 2px}.project-modal__thumb.is-active,.project-modal__thumb:hover{border-color:rgba(240,223,185,.36)}
+  .project-modal__content{padding-top:28px}.project-modal__eyebrow{color:rgba(240,223,185,.62);font-weight:680}
+  .project-modal__content dl div{border-top-color:rgba(255,255,255,.04)}.project-modal__content dt{color:rgba(185,176,165,.76)}
+  .project-modal__cta{margin-bottom:4px;border-color:rgba(240,223,185,.36);background:rgba(216,183,128,.09);color:#fff8ed;font-weight:720}
+}
