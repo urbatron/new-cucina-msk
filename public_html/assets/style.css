@@ -391,3 +391,11 @@
   .projects-page .project-card__body,.projects-page .project-card--wide .project-card__body{align-content:end;padding-bottom:40px}
   .projects-page .project-card__action,.projects-page .project-card--wide .project-card__action{margin-top:8px;margin-bottom:0;border-width:1px;border-color:rgba(240,223,185,.12);background:rgba(10,16,26,.12);color:rgba(255,255,255,.90)}
 }
+
+/* Projects mobile premium gradient pass: remove hard left column feel. */
+@media (max-width:768px){
+  .projects-page .project-card__shade,.projects-page .project-card--wide .project-card__shade{background:linear-gradient(180deg,rgba(4,7,11,0) 0%,rgba(4,7,11,.045) 46%,rgba(4,7,11,.58) 100%),radial-gradient(ellipse at 24% 86%,rgba(4,7,11,.46) 0%,rgba(4,7,11,.30) 34%,rgba(4,7,11,.10) 58%,rgba(4,7,11,0) 78%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.028),inset 0 0 20px rgba(0,0,0,.14)}
+  .projects-page .project-card__badge,.projects-page .project-card--wide .project-card__badge{border-color:rgba(240,223,185,.13);background:rgba(10,16,26,.13);backdrop-filter:blur(3px);color:rgba(255,250,242,.88);box-shadow:none}
+  .projects-page .project-card__action,.projects-page .project-card--wide .project-card__action{border-color:rgba(240,223,185,.095);background:rgba(10,16,26,.09);color:rgba(255,255,255,.88);font-weight:620;box-shadow:none;backdrop-filter:blur(3px)}
+  .projects-page .project-card__action span,.projects-page .project-card--wide .project-card__action span{color:rgba(240,223,185,.72)}
+}
