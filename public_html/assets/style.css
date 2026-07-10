@@ -453,21 +453,13 @@
   .project-modal__content dt{color:rgba(185,176,165,.78)}
 }
 
-/* Showrooms mobile premium balance: lighter top CTA, calmer photo cards. */
+/* Showrooms mobile final micro-polish: calmer CTAs, balanced overlays. */
 @media (max-width:768px){
-  .showrooms-page .showrooms-main{gap:18px;padding-top:6px}
-  .showrooms-page .showrooms-top{margin-bottom:2px}
-  .showrooms-page .page-toolbar{margin:4px 0 6px}
-  .showrooms-page .catalog-meeting{width:auto;max-width:232px;min-height:38px;height:38px;padding:0 15px;border-color:rgba(240,223,185,.13);background:rgba(255,255,255,.018);color:rgba(255,255,255,.86);font-size:12.5px;font-weight:620;box-shadow:inset 0 1px 0 rgba(255,255,255,.02)}
-  .showrooms-page .showrooms-grid{gap:20px}
-  .showrooms-page .showroom-card{width:100%;min-height:480px;padding:28px 26px 30px;border-radius:18px;background-color:#0b111b;overflow:hidden;isolation:isolate;box-shadow:0 12px 24px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.035)}
-  .showrooms-page .showroom-card::after{inset:-1px;border-radius:inherit;background:linear-gradient(180deg,rgba(5,8,13,.035) 0%,rgba(5,8,13,.16) 43%,rgba(5,8,13,.72) 100%),radial-gradient(ellipse at 26% 86%,rgba(5,8,13,.58) 0%,rgba(5,8,13,.38) 34%,rgba(5,8,13,.14) 58%,rgba(5,8,13,0) 78%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.03),inset 0 0 22px rgba(0,0,0,.14)}
-  .showrooms-page .showroom-card--kashirsky{background-position:56% center!important}
+  .showrooms-page .catalog-meeting{width:auto;max-width:232px;min-height:44px;height:44px;padding:0 16px;border-width:1px;border-color:rgba(240,223,185,.105);background:rgba(255,255,255,.014);color:rgba(255,255,255,.86);font-size:12.5px;font-weight:610;box-shadow:inset 0 1px 0 rgba(255,255,255,.018)}
+  .showrooms-page .showroom-card::after{inset:-1px;border-radius:inherit;background:linear-gradient(180deg,rgba(5,8,13,.04) 0%,rgba(5,8,13,.18) 43%,rgba(5,8,13,.74) 100%),radial-gradient(ellipse at 26% 86%,rgba(5,8,13,.56) 0%,rgba(5,8,13,.38) 34%,rgba(5,8,13,.14) 58%,rgba(5,8,13,0) 78%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.028),inset 0 0 20px rgba(0,0,0,.13)}
   .showrooms-page .showroom-card__badge{top:18px;left:18px;min-height:27px;padding:0 11px;border-width:1px;border-color:rgba(240,223,185,.12);background:rgba(10,16,26,.13);backdrop-filter:blur(3px);color:rgba(255,250,242,.86);font-size:11px;font-weight:590;box-shadow:none}
-  .showrooms-page .showroom-card__content{width:100%;gap:10px;padding-bottom:2px}
-  .showrooms-page .showroom-card__kicker{color:rgba(240,223,185,.62);font-size:11.5px;font-weight:680;letter-spacing:.13em}
-  .showrooms-page .showroom-card h2{font-size:clamp(34px,9vw,40px);line-height:1;font-weight:610;text-shadow:0 2px 7px rgba(0,0,0,.42)}
-  .showrooms-page .showroom-card__address{max-width:100%;margin-top:4px;color:rgba(255,252,247,.82);font-size:15px;line-height:1.62;overflow-wrap:break-word;text-shadow:0 1px 5px rgba(0,0,0,.36)}
-  .showrooms-page .showroom-card__phone{width:max-content;margin-top:0;color:rgba(255,244,227,.95);font-size:16px;font-weight:650;letter-spacing:-.01em;text-shadow:0 1px 5px rgba(0,0,0,.38)}
-  .showrooms-page .showroom-card__cta{width:100%;min-height:46px;margin-top:12px;margin-bottom:0;border-color:rgba(240,223,185,.20);background:rgba(10,16,26,.12);color:rgba(255,250,242,.94);font-size:13.5px;font-weight:660;box-shadow:none;backdrop-filter:blur(3px)}
+  .showrooms-page .showroom-card__kicker{color:rgba(240,223,185,.62);font-weight:680}
+  .showrooms-page .showroom-card__address{color:rgba(255,252,247,.86);line-height:1.62;text-wrap:pretty;text-shadow:0 1px 5px rgba(0,0,0,.36)}
+  .showrooms-page .showroom-card__phone{color:rgba(255,244,227,.95);font-weight:650;text-shadow:0 1px 5px rgba(0,0,0,.38)}
+  .showrooms-page .showroom-card__cta{min-height:46px;padding:0 18px;margin-top:12px;margin-bottom:0;border-color:rgba(240,223,185,.20);background:rgba(10,16,26,.12);color:rgba(255,250,242,.94);font-size:13.5px;font-weight:660;box-shadow:none;backdrop-filter:blur(3px)}
 }
