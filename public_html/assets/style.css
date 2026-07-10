@@ -519,7 +519,7 @@
   .designers-page .designer-card--benefit h2{font-size:clamp(24px,6.5vw,28px);line-height:1.08;text-wrap:balance}
   .designers-page .designer-card--benefit p{max-width:96%;font-size:15px;line-height:1.48;color:rgba(255,252,247,.80)}
   .designers-page .designer-card--manager{background-position:58% center!important}
-  .designers-page .designer-card--ads{background-image:url("img/bg/diziner.png");background-position:64% center!important}
+  .designers-page .designer-card--ads{background-image:url("img/bg/akcii.png");background-position:64% center!important}
   .designers-page .designer-card--terms{background-position:48% center!important}
   .designers-page .designer-card--site{background-image:url("img/bg/dzen.png");background-position:70% center!important}
   .designers-page .designer-card--ads::after{background:linear-gradient(180deg,rgba(5,8,13,.02) 0%,rgba(5,8,13,.10) 44%,rgba(5,8,13,.62) 100%),radial-gradient(ellipse at 24% 82%,rgba(5,8,13,.56) 0%,rgba(5,8,13,.36) 34%,rgba(5,8,13,.13) 58%,rgba(5,8,13,0) 80%)}
