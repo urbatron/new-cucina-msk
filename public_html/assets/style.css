@@ -470,7 +470,7 @@
   .service-page .service-flow{gap:18px}
   .service-page .service-hero{min-height:auto;padding:0;border-radius:18px;overflow:hidden;background-image:radial-gradient(ellipse at 82% 76%,rgba(5,8,13,.10) 0%,rgba(5,8,13,.08) 34%,rgba(5,8,13,.34) 66%,rgba(5,8,13,.62) 100%),linear-gradient(90deg,rgba(5,8,13,.76) 0%,rgba(5,8,13,.60) 52%,rgba(5,8,13,.24) 100%),linear-gradient(180deg,rgba(5,8,13,.06) 0%,rgba(5,8,13,.50) 100%),url("img/bg/svoia-service.png");background-position:center,center,center,64% center;background-size:cover;box-shadow:0 12px 24px rgba(0,0,0,.17),inset 0 0 0 1px rgba(255,255,255,.03)}
   .service-page .service-hero::after{inset:-1px;border-radius:inherit;background:radial-gradient(ellipse at 22% 76%,rgba(5,8,13,.54) 0%,rgba(5,8,13,.34) 38%,rgba(5,8,13,.10) 66%,rgba(5,8,13,0) 84%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.028)}
-  .service-page .service-hero__content{gap:16px;padding:24px;max-width:100%}
+  .service-page .service-hero__content{gap:21px;padding:24px 24px 30px;max-width:100%}
   .service-page .service-hero__content p{font-size:16px;line-height:1.52;color:rgba(255,252,247,.86);text-shadow:0 1px 5px rgba(0,0,0,.38)}
   .service-page .service-hero__content p span{color:rgba(240,223,185,.88);font-weight:720;text-wrap:balance;text-shadow:0 1px 5px rgba(0,0,0,.36)}
   .service-page .service-stages{gap:18px}
@@ -478,7 +478,7 @@
   .service-page .service-card::before{inset:-1px;border-radius:inherit;filter:saturate(.98) contrast(1.02) brightness(1.08);transform:scale(1.006)}
   .service-page .service-card::after{inset:-1px;border-radius:inherit;background:linear-gradient(180deg,rgba(5,8,13,.06) 0%,rgba(5,8,13,.16) 42%,rgba(5,8,13,.70) 100%),radial-gradient(ellipse at 25% 84%,rgba(5,8,13,.64) 0%,rgba(5,8,13,.46) 34%,rgba(5,8,13,.18) 58%,rgba(5,8,13,0) 80%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.028),inset 0 0 22px rgba(0,0,0,.14)}
   .service-page .service-step{height:auto;min-height:0;border-radius:18px;overflow:hidden}
-  .service-page .service-step__body{gap:15px;padding:24px;width:100%}
+  .service-page .service-step__body{gap:15px;padding:24px 24px 26px;width:100%}
   .service-page .service-step__meta{align-items:center;gap:10px}
   .service-page .service-step__number{color:rgba(240,223,185,.68);font-size:11px;font-weight:680;line-height:28px;letter-spacing:.20em}
   .service-page .service-step__label{min-height:28px;padding:0 12px;border-color:rgba(240,223,185,.14);background:rgba(10,16,26,.16);color:rgba(255,250,242,.84);font-size:11px;font-weight:620;backdrop-filter:blur(3px)}
@@ -495,7 +495,7 @@
   .service-page .service-summary::before{inset:-1px;border-radius:inherit;filter:saturate(.96) contrast(1.01) brightness(1.06);transform:scale(1.004)}
   .service-page .service-summary::after{inset:-1px;border-radius:inherit;background:linear-gradient(90deg,rgba(5,8,13,.76) 0%,rgba(5,8,13,.60) 56%,rgba(5,8,13,.30) 100%),radial-gradient(ellipse at 74% 72%,rgba(4,7,11,.22),transparent 42%),radial-gradient(circle at 82% 24%,rgba(216,183,128,.06),transparent 30%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.028)}
   .service-page .service-summary h2{font-size:30px;color:rgba(240,223,185,.82)}
-  .service-page .service-summary__text{gap:16px}
+  .service-page .service-summary__text{gap:21px}
   .service-page .service-summary p{font-size:15.5px;line-height:1.52;color:rgba(255,252,247,.84)}
   .service-page .service-summary p:last-child{font-size:17px;line-height:1.48;color:rgba(255,252,247,.92)}
   .service-page .service-summary p span{color:rgba(240,223,185,.88);font-weight:720;box-shadow:inset 0 -0.24em 0 rgba(216,183,128,.12)}
